@@ -74,6 +74,6 @@ Feel free to reach out to me! You can contact me through the [contact form](#) o
 
 - **Name:** Sai Deepak Perumbudur
 - **Email:** psaideepak1@gmail.com
-- **Twitter:** [@SaiDeepak_1](https://twitter.com/SaiDeepak_1)
+- **Twitter:** [@SaiDeepak1323](https://twitter.com/SaiDeepak1323)
 
 Thank you for visiting my portfolio! I hope you find it informative and engaging. If you have any feedback or suggestions, don't hesitate to let me know.
