@@ -15,7 +15,7 @@
 
 <body>
   <header class="d-flex sticky-top flex-wrap justify-content-center px-4 py-0">
-    <a href="/" class="nav0 d-flex align-items-center mb-md-0 me-md-auto  text-decoration-none">
+    <a href="#home" class="nav0 d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
       <span class="dot fs-4 me-1"></span>
       <span class="dot fs-4 me-1"></span>
       <span class="fs-4">Deepak</span>
@@ -34,7 +34,7 @@
   </header>
   <main>
     <div class="container-fluid px-4 py-2">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5 border-bottom">
+      <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="home">
         <div class="col-10 col-sm-8 col-lg-6">
           <img src="assets/modern desktop computer-pana.svg" class="d-block mx-lg-auto img-fluid" alt="Photo"
             width="700" height="500" loading="lazy">
@@ -55,22 +55,162 @@
           </div>
         </div>
       </div>
-      <div class="container-fluid" id="about-me" style="height: 1000px;">
-        
+      <div class="container-fluid" id="about-me">
+        <div class="u-content">
+          <div class="u-body">
+            <div class="card mb-4">
+              <div class="card-body">
+                <div class="row">
+                  <div class="col-md-4 border-md-right border-light text-center">
+                    <img class="img-fluid rounded-circle mb-3" src="./assets/img/avatars/img1.jpg"
+                      alt="Image description" width="84">
+
+                    <h2 class="mb-2">Sai Deepak</h2>
+                    <ul class="list-inline mb-4">
+                      <li class="list-inline-item mr-3">
+                        <a class="link-muted" href="#!">
+                          <i class="fab fa-twitter"></i>
+                        </a>
+                      </li>
+                      <li class="list-inline-item">
+                        <a class="link-muted" href="#!">
+                          <i class="fab fa-linkedin-in"></i>
+                        </a>
+                      </li>
+                    </ul>
+
+                    <div class="mb-3">
+                      <a class="btn btn-primary mb-2" href="#!">Follow Me</a>
+                    </div>
+
+                    <a class="link-muted" href="#!">
+                      <i class="fa fa-envelope mr-2"></i> Send Message
+                    </a>
+                  </div>
+
+                  <div class="col-md-8">
+                    <h3 class="card-title">About me</h3>
+                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis possimus delectus
+                      qui molestias voluptates, explicabo vel itaque odio reiciendis consequuntur ullam maxime deserunt?
+                      Exercitationem molestiae vel, sint ipsum illum at.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit porro reprehenderit, sit ut nemo
+                      culpa, dicta labore commodi consequatur voluptate illum, dolore velit neque. Vero, et architecto.
+                      Iste, voluptate voluptatem.
+                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium cumque quasi laboriosam
+                      perferendis necessitatibus aperiam illo omnis sapiente odit vel impedit quia delectus accusantium
+                      iste cum, accusamus vero recusandae voluptatem.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem minima quam
+                      distinctio fuga reprehenderit praesentium libero illum laboriosam maiores! Sit enim similique
+                      quibusdam ipsa ad, ratione nam tempore tenetur.
+
+                    </p>
+                    <!-- <div class="col-lg-8">
+                      <h4 class="h3 mb-3">Skills</h4>
+
+                      <div class="d-flex flex-wrap align-items-center">
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Tag</span>
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Web Design</span>
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">HTML5</span>
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">CSS</span>
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Marketing</span>
+                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">JavaScript</span>
+                      </div>
+                    </div> -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="container-fluid" id="skills" style="height: 1000px;">
+      <div class="container-fluid" id="skills">
+        <div class="col-lg-6">
+          <div class="card mb-4">
+            <header class="card-header">
+              <h2 class="h3 card-header-title">Education</h2>
+            </header>
+
+            <div class="card-body">
+              <div class="u-timeline">
+                <div class="u-timeline__item">
+                  <div class="h5 font-weight-normal text-muted mb-2">Dec 2010 - Feb 2013</div>
+
+                  <div class="media d-block d-sm-flex align-items-center">
+                    <div class="media-body mb-3 mb-sm-0">
+                      <h3 class="mb-0">BS in Computer Science</h3>
+                      <a class="u-link u-link--primary" href="#!">Harvard University</a>
+                    </div>
+
+                    <a class="ml-sm-auto" href="#!">
+                      <img class="img-fluid" src="./assets/img/brands/harvard.png" width="124" alt="Image description">
+                    </a>
+                  </div>
+                </div>
+
+                <div class="u-timeline__item">
+                  <div class="h5 font-weight-normal text-muted mb-2">Feb 2015 - Mar 2017</div>
+
+                  <div class="media d-block d-sm-flex align-items-center">
+                    <div class="media-body mb-3 mb-sm-0">
+                      <h3 class="mb-0">MBA in Marketing</h3>
+                      <a class="u-link u-link--primary" href="#!">University of California</a>
+                    </div>
+
+                    <a class="ml-sm-auto" href="#!">
+                      <img class="img-fluid" src="./assets/img/brands/berkeley.png" width="124" alt="Image description">
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="card">
+            <header class="card-header">
+              <h2 class="h3 card-header-title">Certificates</h2>
+            </header>
+
+            <div class="card-body">
+              <div class="media d-block d-sm-flex mb-3">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-light u-icon-wrap--horizontal--lg rounded mb-3 mb-sm-0 mr-sm-4">
+                  <i class="fa fa-graduation-cap"></i>
+                </div>
+
+                <div class="media-body">
+                  <div class="h5 font-weight-normal text-muted mb-2">Feb 2013</div>
+                  <h3 class="mb-0">Computer Science Basics</h3>
+                  <a class="u-link u-link--primary" href="#!">Google</a>
+                </div>
+              </div>
+
+              <div class="media d-block d-sm-flex">
+                <div
+                  class="d-flex align-items-center justify-content-center bg-light u-icon-wrap--horizontal--lg rounded mb-3 mb-sm-0 mr-sm-4">
+                  <i class="fa fa-graduation-cap"></i>
+                </div>
+
+                <div class="media-body">
+                  <div class="h5 font-weight-normal text-muted mb-2">Apr 2018</div>
+                  <h3 class="mb-0">Machine Learning Basics</h3>
+                  <a class="u-link u-link--primary" href="#!">Coursera</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid" id="projects">
 
       </div>
-      <div class="container-fluid" id="projects" style="height: 1000px;">
+      <div class="container-fluid" id="contact-me">
 
       </div>
-      <div class="container-fluid" id="contact-me" style="height: 1000px;">
 
-      </div>
     </div>
-
+    <script src="scripts/scripts.js"></script>
   </main>
-  <script src="scripts/scripts.js"></script>
 </body>
+
 
 </html>
