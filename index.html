@@ -1,209 +1,384 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sai Deepak's Portfolio</title>
-  <link rel="stylesheet" href="styles/styles.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-    crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-</head>
-
-<body>
-  <header class="d-flex sticky-top flex-wrap justify-content-center px-4 py-0">
-    <a href="#home" class="nav0 d-flex align-items-center mb-md-0 me-md-auto text-decoration-none">
-      <span class="dot fs-4 me-1"></span>
-      <span class="dot fs-4 me-1"></span>
-      <span class="fs-4">Deepak</span>
-    </a>
-
-    <ul class="nav nav-pills">
-      <li class="d-flex justify-content-center align-content-center nav-item"><a href="#about-me"
-          class="nav1 my-auto">About</a></li>
-      <li class="d-flex justify-content-center align-content-center nav-item"><a href="#skills"
-          class="nav1 my-auto">Skills</a></li>
-      <li class="d-flex justify-content-center align-content-center nav-item"><a href="#projects"
-          class="nav1 my-auto">Projects</a></li>
-      <li class="d-flex justify-content-center align-content-center nav-item"><a href="#contact-me"
-          class="nav1 my-auto">Contact</a></li>
-    </ul>
-  </header>
-  <main>
-    <div class="container-fluid px-4 py-2">
-      <div class="row flex-lg-row-reverse align-items-center g-5 py-5" id="home">
-        <div class="col-10 col-sm-8 col-lg-6">
-          <img src="assets/modern desktop computer-pana.svg" class="d-block mx-lg-auto img-fluid" alt="Photo"
-            width="700" height="500" loading="lazy">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="mediaqueries.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> -->
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Sai Deepak</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Sai Deepak</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
         </div>
-        <div class="col-lg-6">
-          <div class="d-flex flex-column p-5">
-            <span class="blockquote m-0" style="color: #a3a29e;">Hello, Welcome 👋</span>
-            <h1 class="fw-semibold text-white m-0">I'm Sai Deepak</h1>
-            <div id="slider">
-              <div class="span text-white m-0">I am a </div>
-              <div class="span" id="sliderValue"></div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.png" alt="Sai Deepak Perumbudur profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Sai Deepak Perumbudur</h1>
+        <p class="section__text__p2">Software Developer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets')"
+          >
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="My LinkedIn profile"
+            class="icon"
+            onclick="location.href='https://linkedin.com/'"
+          />
+          <img
+            src="./assets/github.png"
+            alt="My Github profile"
+            class="icon"
+            onclick="location.href='https://github.com/'"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="about">
+      <p class="section__text__p1">Get To Know More</p>
+      <h1 class="title">About Me</h1>
+      <div class="section-container">
+        <div class="section__pic-container">
+          <img
+            src="./assets/about-pic.png"
+            alt="Profile picture"
+            class="about-pic"
+          />
+        </div>
+        <div class="about-details-container">
+          <div class="about-containers">
+            <div class="details-container">
+              <img
+                src="./assets/experience.png"
+                alt="Experience icon"
+                class="icon"
+              />
+              <h3>Experience</h3>
+              <p>Fresher</p>
             </div>
-            <div class="d-grid gap-2 d-md-flex justify-content-md-start my-5">
-              <a href="#" class="btn btn-outline-light" aria-current="page"><i class="fas fa-file-download me-2"></i>
-                Contact Me</a>
-              <a href="#" class="btn btn-outline-light">Download Resume</a>
+            <div class="details-container">
+              <img
+                src="./assets/education.png"
+                alt="Education icon"
+                class="icon"
+              />
+              <h3>Education</h3>
+              <p>B.Tech in Computer Science & Engineering</p>
+            </div>
+          </div>
+          <div class="text-container">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic quis
+              reprehenderit et laborum, rem, dolore eum quod voluptate
+              exercitationem nobis, nihil esse debitis maxime facere minus sint
+              delectus velit in eos quo officiis explicabo deleniti dignissimos.
+              Eligendi illum libero dolorum cum laboriosam corrupti quidem,
+              reiciendis ea magnam? Nulla, impedit fuga!
+            </p>
+          </div>
+        </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#experience'"
+      />
+    </section>
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>HTML</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>CSS</h3>
+                  <p>Experienced</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>SASS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>JavaScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>TypeScript</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Material UI</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+            </div>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Frontend Development</h2>
+            <div class="article-container">
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>PostgreSQL</h3>
+                  <p>Basic</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Node JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Express JS</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
+              <article>
+                <img
+                  src="./assets/checkmark.png"
+                  alt="Experience icon"
+                  class="icon"
+                />
+                <div>
+                  <h3>Git</h3>
+                  <p>Intermediate</p>
+                </div>
+              </article>
             </div>
           </div>
         </div>
       </div>
-      <!-- <div class="container-fluid" id="about-me">
-        <div class="u-content">
-          <div class="u-body">
-            <div class="card mb-4">
-              <div class="card-body">
-                <div class="row">
-                  <div class="col-md-4 border-md-right border-light text-center">
-                    <img class="img-fluid rounded-circle mb-3" src="./assets/img/avatars/img1.jpg"
-                      alt="Image description" width="84">
-
-                    <h2 class="mb-2">Sai Deepak</h2>
-                    <ul class="list-inline mb-4">
-                      <li class="list-inline-item mr-3">
-                        <a class="link-muted" href="#!">
-                          <i class="fab fa-twitter"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a class="link-muted" href="#!">
-                          <i class="fab fa-linkedin-in"></i>
-                        </a>
-                      </li>
-                    </ul>
-
-                    <div class="mb-3">
-                      <a class="btn btn-primary mb-2" href="#!">Follow Me</a>
-                    </div>
-
-                    <a class="link-muted" href="#!">
-                      <i class="fa fa-envelope mr-2"></i> Send Message
-                    </a>
-                  </div>
-
-                  <div class="col-md-8">
-                    <h3 class="card-title">About me</h3>
-                    <p class="mb-0">Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis possimus delectus
-                      qui molestias voluptates, explicabo vel itaque odio reiciendis consequuntur ullam maxime deserunt?
-                      Exercitationem molestiae vel, sint ipsum illum at.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit porro reprehenderit, sit ut nemo
-                      culpa, dicta labore commodi consequatur voluptate illum, dolore velit neque. Vero, et architecto.
-                      Iste, voluptate voluptatem.
-                      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Praesentium cumque quasi laboriosam
-                      perferendis necessitatibus aperiam illo omnis sapiente odit vel impedit quia delectus accusantium
-                      iste cum, accusamus vero recusandae voluptatem.
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident voluptatem minima quam
-                      distinctio fuga reprehenderit praesentium libero illum laboriosam maiores! Sit enim similique
-                      quibusdam ipsa ad, ratione nam tempore tenetur.
-
-                    </p> -->
-                    <!-- <div class="col-lg-8">
-                      <h4 class="h3 mb-3">Skills</h4>
-
-                      <div class="d-flex flex-wrap align-items-center">
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Tag</span>
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Web Design</span>
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">HTML5</span>
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">CSS</span>
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">Marketing</span>
-                        <span class="bg-light text-muted rounded py-2 px-3 mb-2 me-2">JavaScript</span>
-                      </div>
-                    </div> -->
-                  <!-- </div>
-                </div>
-              </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#projects'"
+      />
+    </section>
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-1.png"
+                alt="Project 1"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project One</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-2.png"
+                alt="Project 2"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Two</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
+            </div>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img
+                src="./assets/project-3.png"
+                alt="Project 3"
+                class="project-img"
+              />
+            </div>
+            <h2 class="experience-sub-title project-title">Project Three</h2>
+            <div class="btn-container">
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Github
+              </button>
+              <button
+                class="btn btn-color-2 project-btn"
+                onclick="location.href='https://github.com/'"
+              >
+                Live Demo
+              </button>
             </div>
           </div>
         </div>
-      </div> -->
-      <!-- <div class="container-fluid" id="skills">
-        <div class="col-lg-6">
-          <div class="card mb-4">
-            <header class="card-header">
-              <h2 class="h3 card-header-title">Education</h2>
-            </header>
-
-            <div class="card-body">
-              <div class="u-timeline">
-                <div class="u-timeline__item">
-                  <div class="h5 font-weight-normal text-muted mb-2">Dec 2010 - Feb 2013</div>
-
-                  <div class="media d-block d-sm-flex align-items-center">
-                    <div class="media-body mb-3 mb-sm-0">
-                      <h3 class="mb-0">BS in Computer Science</h3>
-                      <a class="u-link u-link--primary" href="#!">Harvard University</a>
-                    </div>
-
-                    <a class="ml-sm-auto" href="#!">
-                      <img class="img-fluid" src="./assets/img/brands/harvard.png" width="124" alt="Image description">
-                    </a>
-                  </div>
-                </div>
-
-                <div class="u-timeline__item">
-                  <div class="h5 font-weight-normal text-muted mb-2">Feb 2015 - Mar 2017</div>
-
-                  <div class="media d-block d-sm-flex align-items-center">
-                    <div class="media-body mb-3 mb-sm-0">
-                      <h3 class="mb-0">MBA in Marketing</h3>
-                      <a class="u-link u-link--primary" href="#!">University of California</a>
-                    </div>
-
-                    <a class="ml-sm-auto" href="#!">
-                      <img class="img-fluid" src="./assets/img/brands/berkeley.png" width="124" alt="Image description">
-                    </a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="card">
-            <header class="card-header">
-              <h2 class="h3 card-header-title">Certificates</h2>
-            </header>
-
-            <div class="card-body">
-              <div class="media d-block d-sm-flex mb-3">
-                <div
-                  class="d-flex align-items-center justify-content-center bg-light u-icon-wrap--horizontal--lg rounded mb-3 mb-sm-0 mr-sm-4">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-
-                <div class="media-body">
-                  <div class="h5 font-weight-normal text-muted mb-2">Feb 2013</div>
-                  <h3 class="mb-0">Computer Science Basics</h3>
-                  <a class="u-link u-link--primary" href="#!">Google</a>
-                </div>
-              </div>
-
-              <div class="media d-block d-sm-flex">
-                <div
-                  class="d-flex align-items-center justify-content-center bg-light u-icon-wrap--horizontal--lg rounded mb-3 mb-sm-0 mr-sm-4">
-                  <i class="fa fa-graduation-cap"></i>
-                </div>
-
-                <div class="media-body">
-                  <div class="h5 font-weight-normal text-muted mb-2">Apr 2018</div>
-                  <h3 class="mb-0">Machine Learning Basics</h3>
-                  <a class="u-link u-link--primary" href="#!">Coursera</a>
-                </div>
-              </div>
-            </div>
-          </div>
+      </div>
+      <img
+        src="./assets/arrow.png"
+        alt="Arrow icon"
+        class="icon arrow"
+        onclick="location.href='./#contact'"
+      />
+    </section>
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:psaideepak1@gmail.com">psaideepak1@gmail.com</a></p>
         </div>
-      </div> -->
-    </div>
-    <script src="scripts/scripts.js"></script>
-  </main>
-</body>
-
-
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>Copyright &#169; 2023 Sai Deepak Perumbudur. All Rights Reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
 </html>
