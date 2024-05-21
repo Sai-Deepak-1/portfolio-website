@@ -3,7 +3,6 @@
 import { useState } from "react";
 import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
-
 import { cn } from "@/lib/utils";
 // import Image from "next/image";
 import animationData from "@/data/confetti.json";
@@ -128,13 +127,7 @@ export const BentoGridItem = ({
         </div>
         {id === 2 && <GlobeDemo />}
         {id === 3 && (
-          <div className="">
-            <div className=""></div>
-          </div>
-        )}
-        {id === 3 && (
           <div className="flex gap-1 lg:gap-5 w-fit absolute -right-3 lg:-right-2">
-            {/* tech stack lists */}
             <div className="flex flex-col gap-3 md:gap-3 lg:gap-8">
               {leftLists.map((item, i) => (
                 <span
@@ -163,16 +156,11 @@ export const BentoGridItem = ({
         )}
         {id === 6 && (
           <div className="mt-5 relative">
-            {/* button border magic from tailwind css buttons  */}
-            {/* add rounded-md h-8 md:h-8, remove rounded-full */}
-            {/* remove focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 */}
-            {/* add handleCopy() for the copy the text */}
             <div
               className={`absolute -bottom-5 right-0 ${
                 copied ? "block" : "block"
               }`}
             >
-              {/* <img src="/confetti.gif" alt="confetti" /> */}
               <Lottie options={defaultOptions} height={200} width={400} />
             </div>
 
