@@ -25,13 +25,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={[inter.variable, calSans.variable].join(" ")}>
-      <head>
-      </head>
-      <body
-        className={`bg-black `}
-      >
-        {children}
-      </body>
+      {children}
     </html>
   );
 }
