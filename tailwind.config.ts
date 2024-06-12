@@ -11,6 +11,10 @@ const config: Config = {
     './src/**/*.{ts,tsx}',
   ])),
   prefix: "",
+  fontFamily: {
+    sans: ["var(--font-inter)", ...defaultTheme.fontFamily.sans],
+    display: ["var(--font-calsans)"],
+  },
   theme: {
     container: {
       center: true,
@@ -25,10 +29,10 @@ const config: Config = {
         "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       animation: {
-        "fade-in": "fade-in 2s ease-in-out forwards",
-        title: "title 2s ease-out forwards",
-        "fade-left": "fade-left 2s ease-in-out forwards",
-        "fade-right": "fade-right 2s ease-in-out forwards",
+        "fade-in": "fade-in 3s ease-in-out forwards",
+        title: "title 3s ease-out forwards",
+        "fade-left": "fade-left 3s ease-in-out forwards",
+        "fade-right": "fade-right 3s ease-in-out forwards",
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
