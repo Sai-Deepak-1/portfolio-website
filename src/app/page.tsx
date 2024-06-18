@@ -4,6 +4,10 @@ import Particles from "@/components/ui/particles";
 import TextReveal from "@/components/ui/text-reveal";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import SkillsShowcase from "@/components/layout/skills/skills-showcase";
+import ProjectShowcase from "@/components/layout/projects/project-showcase";
+import { PROJECT_SHOWCASE } from "@/data/projects";
+import { SKILLS_DATA } from "@/data/skills";
 
 export default function Home() {
   const { theme } = useTheme();
@@ -35,6 +39,8 @@ export default function Home() {
          Machine Learning, AWS, Next.js, Spring Boot."
         />
       </div>
+      <SkillsShowcase skills={SKILLS_DATA} />
+      <ProjectShowcase projects={PROJECT_SHOWCASE} />
     </div>
   );
 }
