@@ -33,11 +33,11 @@ export default function Home() {
 
         <div className="hidden w-screen h-px animate-glow md:block animate-fade-right bg-gradient-to-r from-zinc-300/0 via-zinc-300/50 to-zinc-300/0" />
       </main>
-      <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg bg-white dark:bg-black">
+      <div className="z-10 flex min-h-[16rem] items-center justify-center rounded-lg">
         <TextReveal
           text="I am Currently learning
-         Machine Learning, AWS, Next.js, Spring Boot."
-        />
+          Machine Learning, AWS, Next.js, Spring Boot."
+          />
       </div>
       <SkillsShowcase skills={SKILLS_DATA} />
       <ProjectShowcase projects={PROJECT_SHOWCASE} />
