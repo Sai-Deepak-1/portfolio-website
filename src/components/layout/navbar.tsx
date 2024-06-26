@@ -1,107 +1,91 @@
-import { Button } from "@/components/ui/button"
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
-import Link from "next/link"
-import Image from "next/image"
-import logodark from "../../../public/logo_dark.svg"
-import logolight from "../../../public/logo_light.svg"
-import {Menu, Package2} from "lucide-react"
-import { ThemeToggle } from './theme-toggle';
+import { Dock, DockIcon } from "@/components/ui/magicui/dock";
+import { ModeToggle } from "@/components/ui/magicui/mode-toggle";
+import { buttonVariants } from "@/components/ui/magicui/button";
+import { Separator } from "@/components/ui/magicui/separator";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "@/components/ui/magicui/tooltip";
+import { DATA } from "@/data/social";
+import { cn } from "@/lib/utils";
+import { HomeIcon, NotebookIcon } from "lucide-react";
+import Link from "next/link";
 
-export function Navbar() {
-return(
-    <header className="sticky top-0 flex h-16 justify-between items-center gap-4 bg-background dark:bg-black px-4 md:px-6">
-        <Link
-            href="#"
-            className="flex items-center gap-2 text-lg font-semibold md:text-base"
-        >
-            <Image className="h-6 w-6 block dark:hidden" src={logodark} alt="Logo D"/>
-            <Image className="h-6 w-6 hidden dark:block" src={logolight} alt="Logo D"/>
-            <span className="sr-only">Sai Deepak Portfolio</span>
-        </Link>
-        <nav className="hidden flex-col gap-6 text-lg font-medium md:flex md:flex-row md:items-center md:gap-5 md:text-sm lg:gap-6">
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            About Me
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Education
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Projects
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Resume
-          </Link>
-          <Link
-            href="#"
-            className="text-muted-foreground transition-colors hover:text-foreground"
-          >
-            Contact Me
-          </Link>
-          <ThemeToggle/>
-        </nav>
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button
-              variant="outline"
-              size="icon"
-              className="shrink-0 md:hidden"
-              >
-              <Menu className="h-5 w-5" />
-              <span className="sr-only">Toggle navigation menu</span>
-            </Button>
-          </SheetTrigger>
-          <SheetContent side="left">
-            <nav className="grid gap-6 text-lg font-medium">
+export default function Navbar() {
+  return (
+    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
+      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
+      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
               <Link
-                href="#"
-                className="flex items-center gap-2 text-lg font-semibold"
+                href="/"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
               >
-                <Image className="h-6 w-6 block dark:hidden" src={logodark} alt="Logo D"/>
-                <Image className="h-6 w-6 hidden dark:block" src={logolight} alt="Logo D"/>
-                <span className="sr-only">Sai Deepak Portfolio</span>
+                <HomeIcon className="size-4" />
               </Link>
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Home</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
               <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
+                href="/blog"
+                className={cn(
+                  buttonVariants({ variant: "ghost", size: "icon" }),
+                  "size-12"
+                )}
               >
-                About Me
+                <NotebookIcon className="size-4" />
               </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Education
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Projects
-              </Link>
-              <Link
-                href="#"
-                className="text-muted-foreground hover:text-foreground"
-              >
-                Resume
-              </Link>
-              <Link href="#" className="hover:text-foreground">
-                Contact Me
-              </Link>
-              <ThemeToggle/>
-            </nav>
-          </SheetContent>
-        </Sheet>
-      </header>
-);}
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Blog</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+        <Separator orientation="vertical" className="h-full" />
+        {Object.entries(DATA.contact.social).map(([name, social]) => (
+          <DockIcon key={name}>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <Link
+                  href={social.url}
+                  className={cn(
+                    buttonVariants({ variant: "ghost", size: "icon" }),
+                    "size-12"
+                  )}
+                >
+                  <social.icon className="size-4" />
+                </Link>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>{name}</p>
+              </TooltipContent>
+            </Tooltip>
+          </DockIcon>
+        ))}
+        <Separator orientation="vertical" className="h-full py-2" />
+        <DockIcon>
+          <Tooltip>
+            <TooltipTrigger asChild>
+              <ModeToggle />
+            </TooltipTrigger>
+            <TooltipContent>
+              <p>Theme</p>
+            </TooltipContent>
+          </Tooltip>
+        </DockIcon>
+      </Dock>
+    </div>
+  );
+}

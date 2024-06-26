@@ -4,9 +4,9 @@ import { type ProjectShowcaseListItem } from "@/components/layout/projects/proje
 export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   {
     index: 0,
-    title: "Unstructured Documents Chatbot in AWS",
+    title: "Chat with AWS Docs",
     href: "https://github.com/Sai-Deepak-1/Unstructured-Document-Insights-on-AWS",
-    tags: ["Nextjs", "Tailwindcss", "FastAPI", "AWS EC2", "OpenAI"],
+    tags: ["Nextjs", "TailwindCSS", "FastAPI", "AWS EC2", "OpenAI"],
     image: {
       LIGHT: "",
       DARK: "",
@@ -14,7 +14,7 @@ export const PROJECT_SHOWCASE: ProjectShowcaseListItem[] = [
   },
   {
     index: 1,
-    title: "Biometric Voter Identification System Using Face Recognition",
+    title: "Voter Identification System",
     href: "https://github.com/Sai-Deepak-1/BiometricVoterIdentificatinSystem",
     tags: ["Flask", "HTML", "CSS", "Bootstrap", "Python", "OpenCV"],
     image: {

@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import { Navbar } from "@/components/layout/navbar";
+import { TooltipProvider } from "@/components/ui/magicui/tooltip";
+import Navbar from "@/components/layout/navbar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,8 +28,10 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <Navbar />
+            <TooltipProvider delayDuration={0}>
             {children}
+            <Navbar />
+          </TooltipProvider>
           </ThemeProvider>
         </body>
       </html>
