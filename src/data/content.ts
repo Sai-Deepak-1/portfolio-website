@@ -4,7 +4,6 @@ export const DATA = {
   name: "Sai Deepak Perumbudur",
   about: "Software Developer",
   description: "Full Stack Developer",
-  image: "/assets/profile.jpg",
   interests: ["Music", "Games", "Meditation"],
   bio: "",
   skills: [

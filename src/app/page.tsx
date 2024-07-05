@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
     <section id = "Hero"><Hero/></section>
-    <section id = "AboutMe"><></></section>
+    {/* <section id = "AboutMe"><></></section> */}
     <section id = "Skills"><Skills/></section>
-    <section id = "Projects"><Projects/></section>
-    <section id = "ContactMe"><Contact/></section>
+    {/* <section id = "Projects"><Projects/></section> */}
+    {/* <section id = "ContactMe"><Contact/></section> */}
     </>
   );
 }
