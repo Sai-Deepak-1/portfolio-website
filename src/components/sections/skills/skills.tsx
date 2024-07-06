@@ -129,7 +129,7 @@ export default function Skills() {
   return (
     <section id="skills" className="flex w-full flex-col items-center text-center">
       <MotionDiv>
-        <h2 className="mb-4">My Skills</h2>
+        <h1 className="mb-4">My Skills</h1>
       </MotionDiv>
       <div className="flex flex-wrap justify-center">
         {SKILLS_DATA.map((item, index) => (
