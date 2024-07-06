@@ -10,7 +10,7 @@ export default function Home() {
     {/* <section id = "AboutMe"><></></section> */}
     <section id = "Skills"><Skills/></section>
     {/* <section id = "Projects"><Projects/></section> */}
-    {/* <section id = "ContactMe"><Contact/></section> */}
+    <section id = "ContactMe"><Contact/></section>
     </>
   );
 }
