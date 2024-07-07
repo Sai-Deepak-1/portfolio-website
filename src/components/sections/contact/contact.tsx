@@ -1,6 +1,6 @@
 "use client";
 
-import { buttonVariants } from "@/components/ui/ButtonVariants/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 import Marquee from "@/components/ui/magicui/marquee";
 import { motion, useAnimation, useInView } from "framer-motion";
@@ -125,7 +125,7 @@ export default function Contact() {
     <section id="cta">
       <div className="py-14">
         <div className="container flex w-full flex-col items-center justify-center p-4">
-          <div className="relative flex w-full max-w-[10000px] flex-col items-center justify-center overflow-hidden rounded-[2rem] border">
+          <div className="relative flex w-vw flex-col items-center justify-center overflow-hidden rounded-[2rem] border">
             <Marquee
               reverse
               className="-delay-[200ms] [--duration:20s]"

@@ -1,32 +1,46 @@
 "use client";
-import MotionWrap from '@/components/ui/motion-wrap';
+
+import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/content";
-import Image from "next/image";
+
 export default function Hero() {
   return (
-    <MotionWrap className="mt-14 flex h-[calc(100dvh-62.5px-56px)] w-full items-center justify-center">
-      <div className="grid items-start justify-center gap-4 px-4 md:grid-cols-2 md:px-6 lg:gap-10">
-        <div className="space-y-3 text-left">
-          <div className="inline-block rounded-lg bg-gray-100 px-3 py-1 text-sm dark:bg-foreground/10">
-            Full Stack ML Developer
-          </div>
-          <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
-                Hello there 👋, I&apos;m {DATA.name}
+    <div className="container py-24 lg:py-32">
+      {/* Grid */}
+      <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
+        <div>
+          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            Hello there! 👋😎,
           </h1>
-          <p className="max-w-[600px] text-gray-500 dark:text-gray-400 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            {DATA.bio}
-          </p>
+          <h1 className="mt-2 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+            I&apos;m {DATA.name}
+          </h1>
+          <p className="mt-3 text-xl text-muted-foreground">{DATA.bio}</p>
+          {/* Buttons */}
+          <div className="mt-7 grid gap-3 w-full sm:inline-flex">
+            <Button variant="gooeyLeft" size={"lg"} asChild>
+              <a href="#about">Download Resume</a>
+            </Button>
+            <Button variant="expandIcon" Icon={ArrowRightIcon} size={"lg"} iconPlacement="right" asChild>
+              <a href="#ContactMe">
+                Contact Me
+              </a>
+            </Button>
+          </div>
+          {/* End Buttons */}
         </div>
-        <Image
-          alt={DATA.name}
-          className="mx-auto aspect-video overflow-hidden rounded-xl object-cover object-center"
-          height={450}
-          sizes="100vw"
-          src='/public/assets/hero.jpg'
-          width={800}
-          priority={true}
-        />
+        {/* Col */}
+        <div className="relative ms-4">
+          <img
+            className="w-full rounded-md"
+            src="https://placehold.co/800x700"
+            alt="Image Description"
+          />
+        </div>
+        {/* End Col */}
       </div>
-    </MotionWrap>
+      {/* End Grid */}
+    </div>
   );
 }

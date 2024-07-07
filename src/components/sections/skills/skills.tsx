@@ -174,7 +174,7 @@ function SkillCard({ icon: Icon, name, gradient }: SkillCardProps) {
       <div className="flex flex-col items-center gap-2">
         <div className="flex h-16 w-16 items-center justify-center relative">
           <Icon className="h-6 w-6 z-10"/>
-          <div className={`pointer-events-none absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r ${gradient} opacity-70 blur-[10px] filter transition-all duration-200 ease-linear group-hover:blur-[20px]`}></div>
+          <div className={`pointer-events-none absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r ${gradient} opacity-50 blur-[5px] filter transition-all duration-200 ease-linear group-hover:blur-[10px]`}></div>
         </div>
         <p>{name}</p>
       </div>
