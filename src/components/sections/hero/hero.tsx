@@ -1,46 +1,37 @@
 "use client";
-
-import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/content";
 
 export default function Hero() {
   return (
-    <div className="container py-24 lg:py-32">
-      {/* Grid */}
-      <div className="grid md:grid-cols-2 gap-4 md:gap-8 xl:gap-20 md:items-center">
-        <div>
-          <h1 className="scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+    <div className="container py-12 sm:py-16 md:py-24 lg:py-32">
+      <div className="grid md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+        <div className="text-center md:text-left">
+          <h1 className="scroll-m-20 text-3xl sm:text-4xl font-extrabold tracking-tight lg:text-5xl mb-2">
             Hello there! 👋😎,
           </h1>
-          <h1 className="mt-2 scroll-m-20 text-4xl font-extrabold tracking-tight lg:text-5xl">
+          <h1 className="scroll-m-20 text-3xl sm:text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
             I&apos;m {DATA.name}
           </h1>
-          <p className="mt-3 text-xl text-muted-foreground">{DATA.bio}</p>
-          {/* Buttons */}
-          <div className="mt-7 grid gap-3 w-full sm:inline-flex">
-            <Button variant="gooeyLeft" size={"lg"} asChild>
+          <p className="text-lg sm:text-xl text-muted-foreground mb-6">{DATA.bio}</p>
+          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <Button variant="gooeyLeft" size="lg" asChild className="w-full sm:w-auto">
               <a href="#about">Download Resume</a>
             </Button>
-            <Button variant="expandIcon" Icon={ArrowRightIcon} size={"lg"} iconPlacement="right" asChild>
-              <a href="#ContactMe">
-                Contact Me
-              </a>
+            <Button variant="expandIcon" Icon={ArrowRightIcon} size="lg" iconPlacement="right" asChild className="w-full sm:w-auto">
+              <a href="#ContactMe">Contact Me</a>
             </Button>
           </div>
-          {/* End Buttons */}
         </div>
-        {/* Col */}
-        <div className="relative ms-4">
+        <div className="mt-8 md:mt-0">
           <img
-            className="w-full rounded-md"
+            className="w-full h-auto rounded-md shadow-lg"
             src="https://placehold.co/800x700"
             alt="Image Description"
           />
         </div>
-        {/* End Col */}
       </div>
-      {/* End Grid */}
     </div>
   );
 }
