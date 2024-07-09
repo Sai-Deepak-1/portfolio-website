@@ -14,6 +14,7 @@ import {
   ChevronRight,
   LucideIcon,
 } from "lucide-react";
+import { DATA } from "@/data/content"
 import { useEffect, useId, useRef, useState, ReactElement } from "react";
 
 interface Tile {
@@ -117,6 +118,11 @@ export default function Contact() {
     }
   }, []);
 
+  const handleContactClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    window.location.href = `mailto:${DATA.contact.email}`;
+  };
+
   return (
     <section id="cta" className="py-8 sm:py-14">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-[95vw] sm:max-w-[90vw]">
@@ -162,7 +168,8 @@ export default function Contact() {
                 Feel free to reach out!
               </p>
               <a
-                href="/Contact"
+                href={`mailto:${DATA.contact.email}`}
+                onClick={handleContactClick}
                 className={cn(
                   buttonVariants({
                     size: "lg",

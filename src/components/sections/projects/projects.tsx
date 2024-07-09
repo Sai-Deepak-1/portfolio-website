@@ -7,7 +7,7 @@ const Project: React.FC = () => {
   return (
     <div
       id="ProjectSection"
-      className="flex flex-col space-y-28 w-full py-32 px-4 md:px-16 lg:px-24 2xl:px-72"
+      className="flex flex-col space-y-28 w-full py-10 px-4 md:px-16 lg:px-24 2xl:px-72"
     >
       {/* Title */}
       <div
@@ -15,10 +15,6 @@ const Project: React.FC = () => {
         className="flex flex-col sm:flex-row items-center mb-8"
       >
         <div className="flex items-center mb-4 sm:mb-0">
-          <ArrowRight className="flex-none h-6 w-6 text-emerald-600 dark:text-emerald-400" />
-          <span className="text-emerald-600 dark:text-emerald-400 font-sans text-xl ml-2">
-            03.
-          </span>
           <h2 className="font-bold tracking-wider text-2xl ml-2 text-slate-800 dark:text-slate-200 whitespace-nowrap">
             Some Things I&apos;ve Built
           </h2>
@@ -75,10 +71,10 @@ const Project: React.FC = () => {
               </ul>
               <div className="flex space-x-4">
                 <Link href={project.links.github}>
-                  <Github className="w-6 h-6 text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400" />
+                  <Github className="w-6 h-6 text-slate-400 transition duration-500 hover:scale-125 hover:text-emerald-600 dark:hover:text-emerald-400" />
                 </Link>
                 <Link href={project.links.external}>
-                  <ExternalLink className="w-6 h-6 text-slate-400 hover:text-emerald-600 dark:hover:text-emerald-400" />
+                  <ExternalLink className="w-6 h-6 text-slate-400 transition duration-500 hover:scale-125 hover:text-emerald-600 dark:hover:text-emerald-400" />
                 </Link>
               </div>
             </div>
