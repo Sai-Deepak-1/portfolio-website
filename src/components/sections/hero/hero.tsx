@@ -28,7 +28,7 @@ export default function Hero() {
               asChild
               className="w-full sm:w-auto"
             >
-              <a href="#about">Download Resume</a>
+              <a href="/resume">Download Resume</a>
             </Button>
             <Button
               variant="expandIcon"

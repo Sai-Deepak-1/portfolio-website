@@ -1,4 +1,10 @@
-import { GlobeIcon } from "lucide-react";
+import {
+  GlobeIcon,
+  AlertTriangle,
+  ChevronLeft,
+  Loader2,
+  X,
+} from "lucide-react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
@@ -217,6 +223,46 @@ export const Icons = {
         fillRule="evenodd"
         d="M68.772 55.603c-1.378-3.061-2.828-3.123-4.137-3.176l-3.524-.043c-1.226 0-3.218.46-4.902 2.3s-6.435 6.287-6.435 15.332 6.588 17.785 7.506 19.013 12.718 20.381 31.405 27.75c15.529 6.124 18.689 4.906 22.061 4.6s10.877-4.447 12.408-8.74 1.532-7.971 1.073-8.74-1.685-1.226-3.525-2.146-10.877-5.367-12.562-5.981-2.91-.919-4.137.921-4.746 5.979-5.819 7.206-2.144 1.381-3.984.462-7.76-2.861-14.784-9.124c-5.465-4.873-9.154-10.891-10.228-12.73s-.114-2.835.808-3.751c.825-.824 1.838-2.147 2.759-3.22s1.224-1.84 1.836-3.065.307-2.301-.153-3.22-4.032-10.011-5.666-13.647"
       />
+    </svg>
+  ),
+  warning: AlertTriangle,
+  twitter: (props: IconProps) => (
+    <svg
+      {...props}
+      height="23"
+      viewBox="0 0 1200 1227"
+      width="23"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path d="M714.163 519.284L1160.89 0H1055.03L667.137 450.887L357.328 0H0L468.492 681.821L0 1226.37H105.866L515.491 750.218L842.672 1226.37H1200L714.137 519.284H714.163ZM569.165 687.828L521.697 619.934L144.011 79.6944H306.615L611.412 515.685L658.88 583.579L1055.08 1150.3H892.476L569.165 687.854V687.828Z" />
+    </svg>
+  ),
+  close: X,
+  spinner: Loader2,
+  chevronLeft: ChevronLeft,
+  chevronRight: (props: IconProps) => (
+    <svg
+      fill="none"
+      stroke="currentColor"
+      width="11"
+      height="11"
+      viewBox="0 0 10 10"
+      aria-hidden="true"
+      strokeWidth="1.5"
+      className="-mr-0.5"
+      strokeLinecap="round"
+      {...props}
+    >
+      <path
+        className="opacity-0 transition group-hover:opacity-100"
+        d="M0 5h7"
+        strokeLinecap="round"
+      ></path>
+      <path
+        className="transition group-hover:translate-x-[3px]"
+        d="M1 1l4 4-4 4"
+        strokeLinecap="round"
+      ></path>
     </svg>
   ),
 };
