@@ -3,7 +3,6 @@ import { ArrowRightIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
 import { DATA } from "@/data/content";
 import Image from "next/image";
-import TextScramble from "@/components/ui/TextScramble";
 import MotionDiv from "@/components/ui/motion-div";
 import CoolPortraitCard from "@/components/ui/cool-potrait-card";
 
@@ -16,7 +15,7 @@ export default function Hero() {
             Hello there! 👋😎,
           </h1>
           <h1 className="scroll-m-20 text-3xl sm:text-4xl font-extrabold tracking-tight lg:text-5xl mb-4">
-            I&apos;m <TextScramble text={DATA.name} />
+            I&apos;m {DATA.firstname}
           </h1>
           <p className="text-lg sm:text-xl text-muted-foreground mb-6">
             {DATA.bio}

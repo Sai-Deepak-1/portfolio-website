@@ -4,12 +4,8 @@ import React from 'react';
 import { DownloadIcon } from "lucide-react"
 import { Button, buttonVariants } from "@/components/ui/button";
 import Link from "next/link";
-import { pdfjs, Document, Page } from 'react-pdf'
 
 const ResumeDownload = () => {
-
-    pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.min.js`
-
     const pdfFile = "/resume/resume.pdf";
 
     const downloadPDF = () => {
@@ -25,11 +21,11 @@ const ResumeDownload = () => {
         <>
             <div className="container mx-auto flex min-h-[calc(100vh-8rem)] items-center px-6 py-12">
                 <div className="mx-auto flex max-w-sm flex-col items-center text-center">
-                    <div className="rounded-full bg-blue-400 p-3 text-sm font-medium dark:bg-gray-800">
+                    {/* <div className="rounded-full bg-blue-400 p-3 text-sm font-medium dark:bg-gray-800">
                         <Document file={pdfFile}>
                             <Page pageIndex={0} />
                         </Document>
-                    </div>
+                    </div> */}
                     <h1 className="mt-3 text-2xl font-semibold text-gray-800 dark:text-white md:text-3xl">
                         Download My Resume
                     </h1>
