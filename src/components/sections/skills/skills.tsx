@@ -1,8 +1,6 @@
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaWindows, FaLinux } from "react-icons/fa";
 import { SiSpring, SiSpringboot, SiFlask, SiPostgresql, SiMongodb, SiNextdotjs, SiFastapi } from "react-icons/si";
-import MotionDiv from "@/components/ui/motion-div";
-import MotionList from "@/components/ui/motion-list";
 import { IconType } from "react-icons";
 
 // ... (SKILLS_DATA remains unchanged)
@@ -141,23 +139,6 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
 export default function Skills() {
   return (
     <section id="skills" className="container py-12 sm:py-16 md:py-24 lg:py-32">
-      <MotionDiv>
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-center mb-8 sm:mb-12 md:mb-16">My Skills</h1>
-      </MotionDiv>
-      <div className="grid gap-8 sm:gap-12">
-        {SKILLS_DATA.map((item, index) => (
-          <MotionDiv key={index}>
-            <div className="text-center">
-              <h3 className="text-xl sm:text-2xl font-semibold mb-4">{item.sectionName}</h3>
-              <MotionList className="flex flex-wrap justify-center gap-4 sm:gap-6">
-                {item.skills.map((skill) => (
-                  <SkillCard key={skill.name} icon={skill.icon} name={skill.name} gradient={skill.gradient} />
-                ))}
-              </MotionList>
-            </div>
-          </MotionDiv>
-        ))}
-      </div>
     </section>
   );
 }
@@ -170,14 +151,7 @@ type SkillCardProps = {
 
 function SkillCard({ icon: Icon, name, gradient }: SkillCardProps) {
   return (
-    <div className="group relative rounded-xl border-none p-3 sm:p-4 text-center shadow-none transition-all duration-200 ease-linear hover:scale-110 hover:drop-shadow-xl">
-      <div className="flex flex-col items-center gap-2">
-        <div className="flex h-12 w-12 sm:h-16 sm:w-16 items-center justify-center relative">
-          <Icon className="h-5 w-5 sm:h-6 sm:w-6 z-10"/>
-          <div className={`pointer-events-none absolute left-1/2 top-1/2 h-full w-full -translate-x-1/2 -translate-y-1/2 overflow-visible rounded-full bg-gradient-to-r ${gradient} opacity-50 blur-[5px] filter transition-all duration-200 ease-linear group-hover:blur-[10px]`}></div>
-        </div>
-        <p className="text-sm sm:text-base">{name}</p>
-      </div>
+    <div>
     </div>
   );
 }

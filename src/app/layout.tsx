@@ -29,8 +29,8 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={0}>
             {children}
-            <Toaster />
             <Navbar />
+            <Toaster />
             <BackToTop/>
           </TooltipProvider>
         </ThemeProvider>

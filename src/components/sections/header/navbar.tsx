@@ -1,91 +1,75 @@
-import { Dock, DockIcon } from "@/components/ui/magicui/dock";
-import { ModeToggle } from "@/components/ui/magicui/mode-toggle";
-import { buttonVariants } from "@/components/ui/magicui/button";
-import { Separator } from "@/components/ui/magicui/separator";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/magicui/tooltip";
-import { DATA } from "@/data/content";
-import { cn } from "@/lib/utils";
-import { HomeIcon, NotebookIcon } from "lucide-react";
-import Link from "next/link";
+"use client"
+import React, { useState, useRef, useEffect } from 'react';
+import { motion, useSpring, useMotionValue } from 'framer-motion';
+import { useTheme } from 'next-themes';
 
-export default function Navbar() {
+const NavItem: React.FC<{ href: string; children: React.ReactNode }> = ({ href, children }) => (
+  <a
+    href={href}
+    className="px-3 py-2 text-sm font-medium transition-colors hover:bg-primary/10 rounded-full"
+  >
+    {children}
+  </a>
+);
+
+const Navbar: React.FC = () => {
+  const [mounted, setMounted] = useState(false);
+  const { theme, setTheme } = useTheme();
+  const dragConstraintsRef = useRef(null);
+
+  const x = useMotionValue(-250);
+  const y = useMotionValue(0);
+
+  const springConfig = { damping: 20, stiffness: 400 };
+  const springX = useSpring(x, springConfig);
+  const springY = useSpring(y, springConfig);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleTheme = () => {
+    setTheme(theme === 'dark' ? 'light' : 'dark');
+  };
+
   return (
-    <div className="pointer-events-none fixed inset-x-0 bottom-0 z-30 mx-auto mb-4 flex origin-bottom h-full max-h-14">
-      <div className="fixed bottom-0 inset-x-0 h-16 w-full bg-background to-transparent backdrop-blur-lg [-webkit-mask-image:linear-gradient(to_top,black,transparent)] dark:bg-background"></div>
-      <Dock className="z-50 pointer-events-auto relative mx-auto flex min-h-full h-full items-center px-1 bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)] transform-gpu dark:[border:1px_solid_rgba(255,255,255,.1)] dark:[box-shadow:0_-20px_80px_-20px_#ffffff1f_inset] ">
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Link
-                href="/"
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "icon" }),
-                  "size-12"
-                )}
-              >
-                <HomeIcon className="size-4" />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Home</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <Link
-                href="/blog"
-                className={cn(
-                  buttonVariants({ variant: "ghost", size: "icon" }),
-                  "size-12"
-                )}
-              >
-                <NotebookIcon className="size-4" />
-              </Link>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Blog</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-        <Separator orientation="vertical" className="h-full" />
-        {Object.entries(DATA.contact.social).map(([name, social]) => (
-          <DockIcon key={name}>
-            <Tooltip>
-              <TooltipTrigger asChild>
-                <Link
-                  href={social.url}
-                  className={cn(
-                    buttonVariants({ variant: "ghost", size: "icon" }),
-                    "size-12"
-                  )}
-                >
-                  <social.icon className="size-4" />
-                </Link>
-              </TooltipTrigger>
-              <TooltipContent>
-                <p>{name}</p>
-              </TooltipContent>
-            </Tooltip>
-          </DockIcon>
-        ))}
-        <Separator orientation="vertical" className="h-full py-2" />
-        <DockIcon>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <ModeToggle />
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Theme</p>
-            </TooltipContent>
-          </Tooltip>
-        </DockIcon>
-      </Dock>
+    <div ref={dragConstraintsRef} className="fixed inset-x-0 bottom-0 h-24 pointer-events-none">
+      <motion.nav
+        drag
+        dragMomentum={false}
+        dragElastic={0.1}
+        dragConstraints={dragConstraintsRef}
+        style={{ x: springX, y: springY }}
+        onDragEnd={() => {
+          springX.set(0);
+          springY.set(0);
+        }}
+        className="absolute left-1/2 bottom-4 transform -translate-x-1/2 bg-background/30 dark:bg-background/50 backdrop-blur-lg rounded-full shadow-lg px-4 py-2 flex items-center space-x-2 cursor-move pointer-events-auto"
+        whileDrag={{ scale: 1.05 }}
+      >
+        <motion.span
+          className="text-xl font-bold bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent px-3 py-2"
+          whileHover={{
+            backgroundImage: 'linear-gradient(to right, #ff7e5f, #feb47b)',
+            transition: { duration: 0.3 }
+          }}
+        >
+          Deepak.dev()
+        </motion.span>
+        <NavItem href="#works">WORKS</NavItem>
+        <NavItem href="#about">ABOUT</NavItem>
+        <NavItem href="#contact">CONTACT</NavItem>
+        <NavItem href="#buy">BUY</NavItem>
+        <button
+          onClick={toggleTheme}
+          className="p-2 rounded-full bg-primary/10 hover:bg-primary/20 transition-colors"
+          aria-label="Toggle theme"
+        >
+          {mounted && (theme === 'dark' ? '🌙' : '☀️')}
+        </button>
+      </motion.nav>
     </div>
   );
-}
+};
+
+export default Navbar;
