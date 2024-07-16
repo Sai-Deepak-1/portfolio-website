@@ -31,6 +31,32 @@ export const DATA = {
     "Jupyter Notebook",
     "Google Colab",
   ],
+  services : [
+    {
+      id: '01',
+      title: 'Next.js React Development',
+      description: 'Develop modern, high-performance web applications using Next.js and React. We create responsive, server-side rendered applications with optimized user experiences.',
+      color: 'blue'
+    },
+    {
+      id: '02',
+      title: 'Full Stack Development',
+      description: 'Comprehensive full-stack solutions using various technologies. From front-end React applications to robust back-end systems, we cover all aspects of your development needs.',
+      color: 'green',
+    },
+    {
+      id: '03',
+      title: 'Machine Learning and LLM Integration',
+      description: 'Integrate cutting-edge Machine Learning and Large Language Models into your applications. We help you leverage AI to enhance functionality and user experience.',
+      color: 'purple',
+    },
+    {
+      id: '04',
+      title: 'Java Spring and Spring Boot Development',
+      description: 'Build enterprise-grade applications with Java Spring and Spring Boot. We offer scalable, secure, and efficient back-end solutions for your business needs.',
+      color: 'red'
+    }
+  ],
   contact: {
     email: "psaideepak1@gmail.com",
     social: {

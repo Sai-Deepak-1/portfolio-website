@@ -6,6 +6,8 @@ import { ThemeProvider } from "@/components/ui/theme-provider";
 import Navbar from "@/components/sections/header/navbar";
 import { TooltipProvider } from "@/components/ui/magicui/tooltip";
 import BackToTop from "@/components/ui/backtotop";
+import MotionWrap from "@/components/ui/motion-wrap";
+import Contact from "@/components/sections/contact/contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className='scroll-smooth' style={{scrollBehavior:'smooth'}} lang="en" suppressHydrationWarning>
+    <html className='scroll-smooth' style={{ scrollBehavior: 'smooth' }} lang="en" suppressHydrationWarning>
       <body className={inter.className}>
         <ThemeProvider
           attribute="class"
@@ -29,9 +31,12 @@ export default function RootLayout({
         >
           <TooltipProvider delayDuration={0}>
             {children}
+            <MotionWrap className="mt-14 flex w-full items-center justify-center">
+              <section id="ContactMe"><Contact /></section>
+            </MotionWrap>
             <Navbar />
             <Toaster />
-            <BackToTop/>
+            <BackToTop />
           </TooltipProvider>
         </ThemeProvider>
       </body>
