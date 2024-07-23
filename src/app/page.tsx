@@ -11,7 +11,7 @@ export default function Home() {
     <section id = "Hero"><Hero/></section>
     </MotionWrap>
     {/* <section id = "AboutMe"><></></section> */}
-    {/* <section id = "Skills"><Skills/></section> */}
+    <section id = "Skills"><Skills/></section>
     {/* <section id = "Projects"><Projects/></section> */}
     </>
   );

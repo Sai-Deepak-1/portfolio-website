@@ -1,7 +1,10 @@
+"use client"
+
 import React from "react";
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaJava, FaPython, FaGitAlt, FaAws, FaWindows, FaLinux } from "react-icons/fa";
 import { SiSpring, SiSpringboot, SiFlask, SiPostgresql, SiMongodb, SiNextdotjs, SiFastapi } from "react-icons/si";
 import { IconType } from "react-icons";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 
 // ... (SKILLS_DATA remains unchanged)
 type Skill = {
@@ -137,21 +140,19 @@ export const SKILLS_DATA: SkillsShowcaseProps["skills"] = [
   },
 ];
 export default function Skills() {
+  const transformedItems = SKILLS_DATA.flatMap((section) =>
+    section.skills.map((skill) => ({
+      text: skill.name,
+      Icon: skill.icon,
+    }))
+  );
+
   return (
     <section id="skills" className="container py-12 sm:py-16 md:py-24 lg:py-32">
+      <h2 className="text-3xl font-bold text-center mb-8">My Skills</h2>
+      <div className="max-w-4xl mx-auto px-4">
+        <HoverEffect items={transformedItems} />
+      </div>
     </section>
-  );
-}
-
-type SkillCardProps = {
-  icon: IconType;
-  name: string;
-  gradient: string;
-};
-
-function SkillCard({ icon: Icon, name, gradient }: SkillCardProps) {
-  return (
-    <div>
-    </div>
   );
 }
