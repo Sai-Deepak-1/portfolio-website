@@ -3,11 +3,11 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "@/components/ui/toaster";
 import { ThemeProvider } from "@/components/ui/theme-provider";
-import Navbar from "@/components/sections/header/navbar";
+import Navbar from "@/components/sections/navbar";
 import { TooltipProvider } from "@/components/ui/magicui/tooltip";
 import BackToTop from "@/components/ui/backtotop";
 import MotionWrap from "@/components/ui/motion-wrap";
-import Contact from "@/components/sections/contact/contact";
+import Contact from "@/components/sections/contact";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
