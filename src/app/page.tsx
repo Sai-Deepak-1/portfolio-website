@@ -1,10 +1,10 @@
-import Image from "next/image";
-import { ThemeSwitcher } from '@/components/shared/theme-switcher';
+'use client';
 
 export default function Home() {
+
   return (
-    <>
-      <ThemeSwitcher/>
-    </>
+    <div>
+      
+    </div>
   );
 }
