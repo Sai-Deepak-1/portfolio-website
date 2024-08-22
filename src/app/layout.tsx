@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
-import Header from '@/components/sections/Header';
+
 import LocoScroll from './../components/shared/LocoScroll';
 
 const fontSans = Inter({
@@ -41,11 +41,12 @@ export default function RootLayout({
           >
             <LocoScroll>
 
-            <Header />
-            {/* <div className="sticky inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"> */}
-            {children}
-            {/* </div> */}
-            <Toaster />
+              
+              {/* <div className="sticky inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"> */}
+              {children}
+              {/* </div> */}
+              <Toaster />
+              
             </LocoScroll>
           </ThemeProvider>
 

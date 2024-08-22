@@ -1,103 +1,21 @@
 'use client';
 
+import Hero from "@/components/sections/Hero";
+import Header from '@/components/sections/Header';
 export default function Home() {
 
   return (
-    <div>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa qui minima modi. Aut, odio? Quam eligendi voluptatem eum dicta maiores quasi voluptate dolor quisquam vel temporibus assumenda, nisi corrupti facilis?
-    </div>
+    <>
+      <Header />
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+      <Hero/>
+    </>
   );
 }

@@ -5,7 +5,7 @@ import { usePathname } from 'next/navigation';
 import { menuSlide } from '../anim';
 import Links from './Link';
 import Curve from './Curve';
-import Footer from './NavFooter';
+import NavFooter from './NavFooter';
 
 const navItems = [
     {
@@ -45,7 +45,7 @@ const Nav = () => {
                         })
                     }
                 </div>
-                <Footer />
+                <NavFooter />
             </div>
             <Curve />
         </motion.div>

@@ -1,6 +1,6 @@
 'use client'
 import { useEffect, useLayoutEffect, useRef, useState } from 'react';
-import styles from './style.module.scss'
+import styles from './style.module.scss';
 import Nav from './Nav';
 import { AnimatePresence } from 'framer-motion';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
@@ -8,28 +8,34 @@ import { usePathname } from 'next/navigation';
 import gsap from 'gsap';
 
 export default function Home() {
-
+  
   const header = useRef(null);
   const [isActive, setIsActive] = useState(false);
   const pathname = usePathname();
   const button = useRef(null);
 
   useEffect(() => {
-    setIsActive(false)
-  }, [pathname])
+    setIsActive(false); // Close the menu when the pathname changes
+  }, [pathname]);
 
   useLayoutEffect(() => {
-    gsap.registerPlugin(ScrollTrigger)
-    gsap.to(button.current, {
-      scrollTrigger: {
-        trigger: document.documentElement,
-        start: 0,
-        end: window.innerHeight,
-        onLeave: () => { gsap.to(button.current, { scale: 1, duration: 0.25, ease: "power1.out" }) },
-        onEnterBack: () => { gsap.to(button.current, { scale: 0, duration: 0.25, ease: "power1.out" }) }
-      }
-    })
-  }, [])
+    gsap.registerPlugin(ScrollTrigger);
+
+    const scrollTrigger = ScrollTrigger.create({
+      trigger: document.documentElement,
+      start: 0,
+      end: window.innerHeight,
+      onLeave: () => {
+        gsap.to(button.current, { scale: 1, duration: 0.25, ease: "power1.out" });
+      },
+      onEnterBack: () => {
+        gsap.to(button.current, { scale: 0, duration: 0.25, ease: "power1.out" });
+        setIsActive(false); // Close the menu when scrolling back to the top
+      },
+    });
+
+    return () => scrollTrigger.kill(); // Clean up the scroll trigger on component unmount
+  }, []);
 
   return (
     <>
@@ -62,13 +68,14 @@ export default function Home() {
       </div>
 
       <div ref={button} className={styles.headerButtonContainer}>
-        <div onClick={() => { setIsActive(!isActive) }} className={`${styles.button}`}>
-          <div className={`${styles.burger} ${isActive ? styles.burgerActive : ""}`}></div>
+        <div onClick={() => setIsActive(!isActive)} className={`${styles.button}`}>
+          <div className={`${styles.burger} ${isActive ? styles.burgerActive : ''}`}></div>
         </div>
       </div>
+
       <AnimatePresence mode="wait">
         {isActive && <Nav />}
       </AnimatePresence>
     </>
-  )
+  );
 }
