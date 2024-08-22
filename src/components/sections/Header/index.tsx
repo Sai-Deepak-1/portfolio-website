@@ -15,7 +15,7 @@ export default function Home() {
   const button = useRef(null);
 
   useEffect(() => {
-    if (isActive) setIsActive(false)
+    setIsActive(false)
   }, [pathname])
 
   useLayoutEffect(() => {
