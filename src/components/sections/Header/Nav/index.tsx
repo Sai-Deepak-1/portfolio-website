@@ -1,55 +1,43 @@
-import React, { useState } from 'react'
+'use client';
+import { useState } from 'react'
+import { AnimatePresence, motion } from 'framer-motion';
+import Button from './Button';
 import styles from './styles.module.scss';
-import { motion } from 'framer-motion';
-import { usePathname } from 'next/navigation';
-import { menuSlide } from '../anim';
-import Links from './Link';
-import Curve from './Curve';
-import NavFooter from './NavFooter';
+import Menu from './Menu';
 
-const navItems = [
-    {
-        title: "Home",
-        href: "/",
+const menu = {
+    open: {
+        width: "480px",
+        height: "650px",
+        top: "-25px",
+        right: "-25px",
+        transition: { duration: 0.75, type: "tween", ease: [0.76, 0, 0.24, 1]}
     },
-    {
-        title: "Work",
-        href: "/work",
-    },
-    {
-        title: "About",
-        href: "/about",
-    },
-    {
-        title: "Contact",
-        href: "/contact",
-    },
-]
-
-
-
-const Nav = () => {
-    const pathname = usePathname();
-    const [selectedIndicator, setSelectedIndicator] = useState(pathname);
-
-    return (
-        <motion.div variants={menuSlide} initial="initial" animate="enter" exit="exit" className={styles.menu}>
-            <div className={styles.body}>
-                <div onMouseLeave={() => { setSelectedIndicator(pathname) }} className={styles.nav}>
-                    <div className={styles.header}>
-                        <p>Navigation</p>
-                    </div>
-                    {
-                        navItems.map((data, index) => {
-                            return <Links key={index} data={{ ...data, index }} isActive={selectedIndicator == data.href} setSelectedIndicator={setSelectedIndicator}></Links>
-                        })
-                    }
-                </div>
-                <NavFooter />
-            </div>
-            <Curve />
-        </motion.div>
-    )
+    closed: {
+        width: "100px",
+        height: "40px",
+        top: "0px",
+        right: "0px",
+        transition: { duration: 0.75, delay: 0.35, type: "tween", ease: [0.76, 0, 0.24, 1]}
+    }
 }
 
-export default Nav
+export default function Nav() {
+    const [isActive, setIsActive] = useState(false);
+
+    return (
+        <div className={styles.header}>
+            <motion.div 
+                className={styles.menu}
+                variants={menu}
+                animate={isActive ? "open" : "closed"}
+                initial="closed"
+            >
+                <AnimatePresence>
+                    {isActive && <Menu />}
+                </AnimatePresence>
+            </motion.div>
+            <Button isActive={isActive} toggleMenu={() => {setIsActive(!isActive)}}/>
+        </div>
+    )
+}
