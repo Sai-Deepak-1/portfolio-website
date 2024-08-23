@@ -5,7 +5,7 @@ import { perspective, slideIn } from "./anim";
 import { useRef } from 'react';
 
 export default function Menu() {
-  const ref = useRef(null); // Move the useRef hook outside of the callback function
+  const ref = useRef(null);
   
   return (
     <div className={styles.nav}>
@@ -23,7 +23,7 @@ export default function Menu() {
                 animate="enter"
                 exit="exit"
               >
-                <a href={href}>
+                <a href={href} className={styles.link}>
                   {title}
                 </a>
               </motion.div>
@@ -44,6 +44,7 @@ export default function Menu() {
               animate="enter"
               exit="exit"
               key={`f_${i}`}
+              className={styles.link}
             >
               {title}
             </motion.a>
