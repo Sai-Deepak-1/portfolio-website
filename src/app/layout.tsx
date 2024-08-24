@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import Header from '@/components/sections/Header';
+import Footer from '@/components/sections/Footer';
 import LocoScroll from '@/components/shared/LocoScroll';
 
 const fontSans = Inter({
@@ -29,13 +30,13 @@ export default function RootLayout({
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans antialiased",
+            "min-h-screen bg-background font-sans",
             fontSans.variable
           )}
         >
           <ThemeProvider
             attribute="class"
-            defaultTheme="light"
+            defaultTheme="dark"
             enableSystem
             disableTransitionOnChange
           >
@@ -44,6 +45,7 @@ export default function RootLayout({
               {/* <div className="sticky inset-0 -z-10 h-full w-full bg-white [background:radial-gradient(125%_125%_at_50%_10%,#fff_40%,#63e_100%)] dark:[background:radial-gradient(125%_125%_at_50%_10%,#000_40%,#63e_100%)]"> */}
               {children}
               {/* </div> */}
+              <Footer />
               <Toaster />
 
             </LocoScroll>

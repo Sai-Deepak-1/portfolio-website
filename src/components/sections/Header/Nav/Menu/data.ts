@@ -1,41 +1,41 @@
 export const links = [
     {
         title: "Projects",
-        href: "/"
+        href: "/projects"
     },
     {
-        title: "Agency",
-        href: "/"
+        title: "About Me",
+        href: "/about"
     },
     {
-        title: "Expertise",
-        href: "/"
+        title: "Skills",
+        href: "/skills"
     },
     {
-        title: "Careers",
-        href: "/"
+        title: "Certifications",
+        href: "/certifications"
     },
     {
         title: "Contact",
-        href: "/"
+        href: "/contact"
     }
 ]
 
 export const footerLinks = [
     {
-        title: "Facebook",
-        href: "/"
+        title: "Github",
+        href: "https://github.com/Sai-Deepak-1"
     },
     {
         title: "LinkedIn",
-        href: "/"
-    },
-    {
-        title: "Instagram",
-        href: "/"
+        href: "https://www.linkedin.com/in/sai-deepak-perumbudur/"
     },
     {
         title: "Twitter",
-        href: "/"
+        href: "https://x.com/"
+    },
+    {
+        title: "Leetcode",
+        href: "https://leetcode.com/u/psaideepak1/"
     }
 ]
