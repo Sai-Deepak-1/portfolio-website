@@ -67,3 +67,15 @@
     @apply bg-background text-foreground;
   }
 }
+
+.spin-on-hover {
+  animation-play-state: paused;
+}
+
+.hovering .spin-on-hover {
+  animation-play-state: running;
+}
+
+.hovering .spin-on-hover:hover {
+  animation-play-state: paused;
+}

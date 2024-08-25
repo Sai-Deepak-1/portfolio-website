@@ -44,6 +44,7 @@ export default function Menu() {
               animate="enter"
               exit="exit"
               key={`f_${i}`}
+              target='_blank'
               className={styles.link}
             >
               {title}

@@ -1,54 +1,35 @@
-import Image from "next/image";
-import Link from "next/link";
 
-// import Logo from "/svg/logo.svg";
+import Image from 'next/image';
+// import Link from "next/link";
 
 const Hero = () => {
     return (
-        <div className="mt-[75] mx-auto flex h-full w-full max-w-5xl flex-col gap-8 px-4 py-4 md:px-6 md:py-10">
+        <div className="mx-auto flex h-screen w-full flex-col justify-center gap-8 px-8 py-30">
             {/* Large Text */}
-            <h1 className="text-3xl font-normal tracking-tight md:text-6xl">
-                This is a component {/* eslint-disable-next-line */}
-                <img
-                    className="my-auto -mt-3 inline w-24 md:-mt-6 md:w-48"
-                    width={192}
-                    height={108}
-                    src="https://newsroom.porsche.com/dam/jcr:a388376a-c5e2-4363-939b-6fbacd867a64/718_neu_2023.png"
-                    alt=""
-                ></img>{" "}
-                with special {/* eslint-disable-next-line */}
-                <img
-                    className="my-auto -mt-3 inline w-24 md:-mt-6 md:w-48"
-                    width={192}
-                    height={108}
-                    src="https://newsroom.porsche.com/dam/jcr:a388376a-c5e2-4363-939b-6fbacd867a64/718_neu_2023.png"
-                    alt=""
-                ></img>{" "}
-                image capabilities. {/* eslint-disable-next-line */}
+            <h1 className="text-8xl font-semibold tracking-tight">
+                HEY{" "} I&apos;M{" "}
+                <Image
+                    className="inline-block align-middle mb-5 hover:animate-spin-90-360"
+                    src="\svg\hero-windmill-1.svg"
+                    alt="Special image"
+                    width={75}
+                    height={75}
+                />{" "}
+                <br />
+                SAI DEEPAK{" "}
+                <Image
+                    className="inline-block align-middle mb-5 animate-spin-360"
+                    src="\svg\hero-windmill-2.svg"
+                    alt="Special image"
+                    width={100}
+                    height={100}
+                />{" "} PERUMBUDUR
             </h1>
-            {/* logo features */}
-            <div className="flex w-fit flex-wrap items-center gap-6 rounded-lg border p-4">
-                <p>As seen in:</p>
-                <Image className="h-6 w-fit dark:invert" src={"/svg/logo.svg"} alt="" height={6} width={6}></Image>
-                <Image className="h-6 w-fit dark:invert" src={"/svg/logo.svg"} alt="" height={6} width={6}></Image>
-                <Image className="h-6 w-fit dark:invert" src={"/svg/logo.svg"} alt="" height={6} width={6}></Image>
-            </div>
-            {/* End Text */}
-            <div className="md:text-lg">
-                <p className="hidden md:block">
-                    We make components for marketing sites.
-                </p>
-                <div className="grid gap-2 md:flex">
-                    <p className="opacity-50">
-                        Visit craftui.org to use our components for free.{" "}
-                    </p>
-                    <Link className="transition-all hover:opacity-70" href="#">
-                        Check it Out -{`>`}
-                    </Link>
-                </div>
-                <p className="mt-4 text-xs">
-                    <span className="opacity-50">Available now online.</span> Tell us
-                    what you build next.
+            <div className="md:text-lg text-center">
+                <p>
+                    I am a full stack web developer and a computer science engineer.
+                    I am passionate about web development, cloud computing, and
+                    cybersecurity. I love to learn new technologies and implement them.
                 </p>
             </div>
         </div>
