@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import { Linkedin, Github, ArrowRight } from 'lucide-react'
+import { Linkedin, Github, CircleArrowRight } from 'lucide-react'
 
 export default function Footer() {
     return (
@@ -28,30 +28,31 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="space-y-4">
-                        <div>
-                            <Link href="/contact" className="text-emerald-400 dark:text-emerald-300 flex items-center mt-2 group">
+                    <div className="flex justify-between gap-2 pt-3 group">
+                            <div>
+                                <Link href="/ContactMe">
+                                    <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">Contact Me</span>
+                                </Link>
+                                <h1 className="pb-2 text-sm text-sectext">Say Hello !</h1>
+                            </div>
+                            <div>
                                 <div>
-                                    <h3 className="font-semibold mb-1">Contact Me</h3>
-                                    <p className="text-sm text-gray-400 dark:text-gray-500">Say Hello !</p>
+                                    <CircleArrowRight size={48} strokeWidth={1} className="transition-all ease-in-out rotate-0 group-hover:-rotate-45 [&_svg]bg-green-400" />
                                 </div>
-                                <div className="ml-auto flex items-center justify-center w-10 h-10 bg-emerald-900 dark:bg-emerald-800 rounded-full group-hover:bg-emerald-700 dark:group-hover:bg-emerald-600 transition-colors duration-300">
-                                    <ArrowRight className="w-4 h-4 text-emerald-200 dark:text-emerald-100 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-100" />
-                                </div>
-                            </Link>
+                            </div>
                         </div>
-
-                        <div className="h-px bg-gray-700 dark:bg-gray-600"></div>
-
-                        <div>
-                            <Link href="/projects" className="text-emerald-400 dark:text-emerald-300 flex items-center mt-2 group">
+                        <div className="flex justify-between gap-2 pt-3 group">
+                            <div>
+                                <Link href="/Projects">
+                                    <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">My Projects</span>
+                                </Link>
+                                <h1 className="pb-2 text-sm text-sectext">Explore Projects</h1>
+                            </div>
+                            <div>
                                 <div>
-                                    <h3 className="font-semibold mb-1">My Projects</h3>
-                                    <p className="text-sm text-gray-400 dark:text-gray-500">Explore Projects</p>
+                                    <CircleArrowRight size={48} strokeWidth={1} className="transition-all ease-in-out rotate-0 group-hover:-rotate-45 [&_svg]bg-green-400" />
                                 </div>
-                                <div className="ml-auto flex items-center justify-center w-10 h-10 bg-emerald-900 dark:bg-emerald-800 rounded-full group-hover:bg-emerald-700 dark:group-hover:bg-emerald-600 transition-colors duration-300">
-                                    <ArrowRight className="w-4 h-4 text-emerald-200 dark:text-emerald-100 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-100" />
-                                </div>
-                            </Link>
+                            </div>
                         </div>
                     </div>
                 </div>
