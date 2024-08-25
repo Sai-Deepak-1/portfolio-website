@@ -1,69 +1,70 @@
-// React and Next.js imports
-import Image from "next/image";
-import Link from "next/link";
-
-// Third-party library imports
-import Balancer from "react-wrap-balancer";
-
-// UI component imports
-import { Button } from "@/components/ui/button";
-
-// Icon imports
-import { Github, Twitter, Facebook } from "lucide-react";
+import Link from 'next/link'
+import { Linkedin, Github, ArrowRight } from 'lucide-react'
 
 export default function Footer() {
     return (
-        <footer>
-            <div className="grid gap-12 md:grid-cols-[1.5fr_0.5fr_0.5fr]">
-                <div className="not-prose flex flex-col gap-6">
-                    <Link href="/">
-                        <h3 className="sr-only">brijr/components</h3>
-                        <Image
-                            src={"/logo/logo.svg"}
-                            alt="Logo"
-                            width={120}
-                            height={27.27}
-                            className="transition-all hover:opacity-75 dark:invert"
-                        ></Image>
-                    </Link>
-                    <p>
-                        <Balancer>
-                            brijr/components is a collection of Next.js, React, Typescript
-                            components for building landing pages and websites.
-                        </Balancer>
-                    </p>
+        <footer className="py-8 px-4 text-gray-800 dark:text-gray-300">
+            <div className="w-vw mx-10">
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 mb-12">
+                    <div>
+                        <h2 className="text-xl font-bold mb-4">
+                            Where <span className="text-indigo-400 dark:text-indigo-300">aesthetics</span> & <br />
+                            <span className="text-teal-400 dark:text-teal-300">functionality</span> meet
+                        </h2>
+                    </div>
+                    <div>
+                        <h3 className="text-amber-400 dark:text-amber-300 font-semibold mb-2">Explore</h3>
+                        <ul className="space-y-2">
+                            <li><Link href="/" className="hover:text-amber-300 dark:hover:text-amber-200 transition-colors">Home</Link></li>
+                            <li><Link href="/about" className="hover:text-amber-300 dark:hover:text-amber-200 transition-colors">About Me</Link></li>
+                            <li><Link href="/contact" className="hover:text-amber-300 dark:hover:text-amber-200 transition-colors">Contact</Link></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 className="text-teal-400 dark:text-teal-300 font-semibold mb-2">Follow Me</h3>
+                        <ul className="space-y-2">
+                            <li><Link href="#" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Linkedin className="w-5 h-5 mr-2" /> LinkedIn</Link></li>
+                            <li><Link href="#" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Github className="w-5 h-5 mr-2" /> Github</Link></li>
+                        </ul>
+                    </div>
+                    <div className="space-y-4">
+                        <div>
+                            <Link href="/contact" className="text-emerald-400 dark:text-emerald-300 flex items-center mt-2 group">
+                                <div>
+                                    <h3 className="font-semibold mb-1">Contact Me</h3>
+                                    <p className="text-sm text-gray-400 dark:text-gray-500">Say Hello !</p>
+                                </div>
+                                <div className="ml-auto flex items-center justify-center w-10 h-10 bg-emerald-900 dark:bg-emerald-800 rounded-full group-hover:bg-emerald-700 dark:group-hover:bg-emerald-600 transition-colors duration-300">
+                                    <ArrowRight className="w-4 h-4 text-emerald-200 dark:text-emerald-100 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-100" />
+                                </div>
+                            </Link>
+                        </div>
+
+                        <div className="h-px bg-gray-700 dark:bg-gray-600"></div>
+
+                        <div>
+                            <Link href="/projects" className="text-emerald-400 dark:text-emerald-300 flex items-center mt-2 group">
+                                <div>
+                                    <h3 className="font-semibold mb-1">My Projects</h3>
+                                    <p className="text-sm text-gray-400 dark:text-gray-500">Explore Projects</p>
+                                </div>
+                                <div className="ml-auto flex items-center justify-center w-10 h-10 bg-emerald-900 dark:bg-emerald-800 rounded-full group-hover:bg-emerald-700 dark:group-hover:bg-emerald-600 transition-colors duration-300">
+                                    <ArrowRight className="w-4 h-4 text-emerald-200 dark:text-emerald-100 group-hover:text-white transform group-hover:-rotate-45 transition-all duration-100" />
+                                </div>
+                            </Link>
+                        </div>
+                    </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <h5>Website</h5>
-                    <Link href="/">Blog</Link>
-                    <Link href="/">Authors</Link>
-                    <Link href="/">Categories</Link>
+                <h1 className="text-center mt-20 text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[13rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-100 dark:from-gray-800 to-gray-300 dark:to-gray-600">
+                    Sai Deepak
+                </h1>
+                <div className="border-t border-gray-700 dark:border-gray-600 pt-8 mt-8 relative overflow-hidden">
+                    <div className="flex flex-col sm:flex-row justify-between items-center text-sm text-gray-800 dark:text-gray-500">
+                        <p className="mb-2 sm:mb-0">Sai Deepak ©2024</p>
+                        <p>Hyderabad, India</p>
+                    </div>
                 </div>
-                <div className="flex flex-col gap-2">
-                    <h5>Legal</h5>
-                    <Link href="/privacy-policy">Privacy Policy</Link>
-                    <Link href="/terms-of-service">Terms of Service</Link>
-                    <Link href="/cookie-policy">Cookie Policy</Link>
-                </div>
-            </div>
-            <div className="not-prose flex flex-col justify-between gap-6 border-t md:flex-row md:items-center md:gap-2">
-                <div className="flex gap-2">
-                    <Button variant="outline" size="icon">
-                        <Github />
-                    </Button>
-                    <Button variant="outline" size="icon">
-                        <Twitter />
-                    </Button>
-                    <Button variant="outline" size="icon">
-                        <Facebook />
-                    </Button>
-                </div>
-                <p className="text-muted-foreground">
-                    ©{" "}
-                    <a href="https://github.com/brijr/components">brijr/components</a>.
-                    All rights reserved. 2024-present.
-                </p>
             </div>
         </footer>
-    );
+    )
 }

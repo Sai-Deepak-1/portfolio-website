@@ -4,12 +4,12 @@ import Image from 'next/image';
 
 const Hero = () => {
     return (
-        <div className="mx-auto flex h-screen w-full flex-col justify-center gap-8 px-8 py-30">
+        <div className="mx-auto flex h-[calc(100vh-86px)] w-full flex-col justify-center gap-8 px-8 py-30">
             {/* Large Text */}
             <h1 className="text-8xl font-semibold tracking-tight">
                 HEY{" "} I&apos;M{" "}
                 <Image
-                    className="inline-block align-middle mb-5 hover:animate-spin-90-360"
+                    className="inline-block align-middle mb-5 "
                     src="\svg\hero-windmill-1.svg"
                     alt="Special image"
                     width={75}
