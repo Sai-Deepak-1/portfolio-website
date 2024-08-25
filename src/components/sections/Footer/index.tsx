@@ -11,9 +11,6 @@ import { Button } from "@/components/ui/button";
 // Icon imports
 import { Github, Twitter, Facebook } from "lucide-react";
 
-// Asset imports
-// import Logo from "/svg/logo.svg";
-
 export default function Footer() {
     return (
         <footer>
@@ -22,7 +19,7 @@ export default function Footer() {
                     <Link href="/">
                         <h3 className="sr-only">brijr/components</h3>
                         <Image
-                            src={"/svg/logo.svg"}
+                            src={"/logo/logo.svg"}
                             alt="Logo"
                             width={120}
                             height={27.27}
