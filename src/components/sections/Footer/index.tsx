@@ -28,11 +28,11 @@ export default function Footer() {
                         </ul>
                     </div>
                     <div className="space-y-4">
-                    <div className="flex justify-between gap-2 pt-3 group">
+                        <Link href="/ContactMe" className="flex justify-between gap-2 pt-3 group">
                             <div>
-                                <Link href="/ContactMe">
+                                <div>
                                     <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">Contact Me</span>
-                                </Link>
+                                </div>
                                 <h1 className="pb-2 text-sm text-sectext">Say Hello !</h1>
                             </div>
                             <div>
@@ -40,12 +40,12 @@ export default function Footer() {
                                     <CircleArrowRight size={48} strokeWidth={1} className="transition-all ease-in-out rotate-0 group-hover:-rotate-45 [&_svg]bg-green-400" />
                                 </div>
                             </div>
-                        </div>
-                        <div className="flex justify-between gap-2 pt-3 group">
+                        </Link>
+                        <Link href="/Projects" className="flex justify-between gap-2 pt-3 group">
                             <div>
-                                <Link href="/Projects">
+                                <div>
                                     <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">My Projects</span>
-                                </Link>
+                                </div>
                                 <h1 className="pb-2 text-sm text-sectext">Explore Projects</h1>
                             </div>
                             <div>
@@ -53,7 +53,7 @@ export default function Footer() {
                                     <CircleArrowRight size={48} strokeWidth={1} className="transition-all ease-in-out rotate-0 group-hover:-rotate-45 [&_svg]bg-green-400" />
                                 </div>
                             </div>
-                        </div>
+                        </Link>
                     </div>
                 </div>
                 <h1 className="text-center mt-20 text-5xl sm:text-7xl md:text-9xl lg:text-[12rem] xl:text-[13rem] font-bold bg-clip-text text-transparent bg-gradient-to-b from-gray-100 dark:from-gray-800 to-gray-300 dark:to-gray-600">
