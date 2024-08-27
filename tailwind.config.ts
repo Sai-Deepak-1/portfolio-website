@@ -19,6 +19,7 @@ const config = {
     },
     extend: {
       colors: {
+        green: "#00ff00",
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -53,6 +54,9 @@ const config = {
           foreground: "hsl(var(--card-foreground))",
         },
       },
+      spacing: {
+        "0.5": "0.125rem", // 2px
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -71,19 +75,28 @@ const config = {
           "0%": { transform: "rotate(0deg)" },
           "100%": { transform: "rotate(360deg)" },
         },
-        "spin-90-360": {
-          "0%": { transform: "rotate(0deg)" },
-          "25%": { transform: "rotate(90deg)" },
-          "50%": { transform: "rotate(180deg)" },
-          "75%": { transform: "rotate(270deg)" },
-          "100%": { transform: "rotate(360deg)" },
+        ping: {
+          "75%, 100%": {
+            transform: "scale(2)",
+            opacity: "0",
+          },
+        },
+        marquee: {
+          from: { transform: "translateX(0)" },
+          to: { transform: "translateX(calc(-100% - var(--gap)))" },
+        },
+        "marquee-vertical": {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(calc(-100% - var(--gap)))" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
         "spin-360": "spin360 5s linear infinite",
-        "spin-90-360": "spin-90-360 5s linear infinite",
+        ping: "ping 1s cubic-bezier(0, 0, 0.2, 1) infinite",
+        marquee: "marquee var(--duration) linear infinite",
+        "marquee-vertical": "marquee-vertical var(--duration) linear infinite",
       },
       boxShadow: {
         "theme-switcher-label":

@@ -23,12 +23,12 @@ export default function Footer() {
                     <div>
                         <h3 className="text-teal-400 dark:text-teal-300 font-semibold mb-2">Follow Me</h3>
                         <ul className="space-y-2">
-                            <li><Link href="#" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Linkedin className="w-5 h-5 mr-2" /> LinkedIn</Link></li>
-                            <li><Link href="#" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Github className="w-5 h-5 mr-2" /> Github</Link></li>
+                            <li><Link href="https://www.linkedin.com/in/sai-deepak-perumbudur/" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Linkedin className="w-5 h-5 mr-2" /> LinkedIn</Link></li>
+                            <li><Link href="https://github.com/Sai-Deepak-1" className="flex items-center hover:text-teal-300 dark:hover:text-teal-200 transition-colors"><Github className="w-5 h-5 mr-2" /> Github</Link></li>
                         </ul>
                     </div>
                     <div className="space-y-4">
-                        <Link href="/ContactMe" className="flex justify-between gap-2 pt-3 group">
+                        <Link href="/contact" className="flex justify-between gap-2 pt-3 group">
                             <div>
                                 <div>
                                     <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">Contact Me</span>
@@ -41,7 +41,7 @@ export default function Footer() {
                                 </div>
                             </div>
                         </Link>
-                        <Link href="/Projects" className="flex justify-between gap-2 pt-3 group">
+                        <Link href="/projects" className="flex justify-between gap-2 pt-3 group">
                             <div>
                                 <div>
                                     <span className="text-xl font-semibold transition-all group-hover:text-cyan-500">My Projects</span>

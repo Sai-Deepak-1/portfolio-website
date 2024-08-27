@@ -13,31 +13,31 @@ interface HeroCardProps {
 
 const HeroSectionTextHover: React.FC<HeroCardProps> = ({ className }) => {
     const webDevIcons: ItemProps[] = [
-        { icon: <SiNextdotjs color={SiNextdotjsHex} />, position: "-left-20 top-3 group-hover:-rotate-[10deg] group-hover:-translate-y-12 md:-left-28 md:-top-2 sm:-left-24" },
-        { icon: <SiCss3 color={SiCss3Hex} />, position: "-left-[72px] top-0 group-hover:-rotate-[20deg] group-hover:-translate-x-10 md:-left-[135px] md:-top-2 sm:-left-24 " },
-        { icon: <SiJavascript color={SiJavascriptHex} />, position: "left-[150px] top-0 group-hover:rotate-[10deg] group-hover:-translate-y-10 md:left-[210px] md:-top-1 sm:left-[180px]" },
-        { icon: <SiReact color={SiReactHex} />, position: "left-[105px] top-0 group-hover:rotate-[20deg] group-hover:translate-x-16 md:left-[190px] md:-top-2 sm:left-[150px]" },
+        { icon: <SiNextdotjs color={SiNextdotjsHex} />, position: "-left-7 top-5 group-hover:-rotate-10 group-hover:translate-y-2" },
+        { icon: <SiCss3 color={SiCss3Hex} />, position: "-left-6 -top-6 group-hover:-rotate-20 group-hover:translate-x-2" },
+        { icon: <SiJavascript color={SiJavascriptHex} />, position: "left-96 -top-7 group-hover:rotate-10 group-hover:-translate-y-2" },
+        { icon: <SiReact color={SiReactHex} />, position: "left-96 top-8 group-hover:rotate-20 group-hover:translate-x-2" },
     ];
 
     const cloudIcons: ItemProps[] = [
-        { icon: <SiAmazonec2 color={SiAmazonec2Hex} />, position: "-left-[100px] -top-7 -rotate-[30deg] group-hover:-translate-y-8 md:-left-40 md:-top-16 sm:-left-32" },
-        { icon: <SiLinux color={SiLinuxHex} />, position: "-left-[115px] -top-2 group-hover:-rotate-45 md:-left-44 md:-top-1 sm:-left-36" },
-        { icon: <SiAmazonwebservices color={SiAmazonwebservicesHex} />, position: "left-32 -top-12 rotate-[30deg] md:left-[200px] md:-top-[70px] sm:left-[175px] sm:-top-12" },
-        { icon: <SiVercel color={SiVercelHex} />, position: "left-32 -top-2 group-hover:rotate-[45deg] md:left-[200px] md:-top-1 sm:left-[160px] " },
+        { icon: <SiAmazonec2 color={SiAmazonec2Hex} />, position: "-left-10 -top-2 group-hover:rotate-30 group-hover:-translate-y-2" },
+        { icon: <SiLinux color={SiLinuxHex} />, position: "-left-12 top-0 group-hover:-rotate-45" },
+        { icon: <SiAmazonwebservices color={SiAmazonwebservicesHex} />, position: "left-10 -top-2 group-hover:rotate-30" },
+        { icon: <SiVercel color={SiVercelHex} />, position: "left-12 top-0 group-hover:rotate-45" },
     ];
 
     const mlIcons: ItemProps[] = [
-        { icon: <SiPython color={SiPythonHex} />, position: "-left-20 top-3 group-hover:-rotate-[10deg] group-hover:-translate-y-12 md:-left-28 md:-top-2 sm:-left-24" },
-        { icon: <SiPytorch color={SiPytorchHex} />, position: "-left-[72px] top-0 group-hover:-rotate-[20deg] group-hover:-translate-x-10 md:-left-[135px] md:-top-2 sm:-left-24 " },
-        { icon: <SiNumpy color={SiNumpyHex} />, position: "left-[150px] top-0 group-hover:rotate-[10deg] group-hover:-translate-y-10 md:left-[210px] md:-top-1 sm:left-[180px]" },
-        { icon: <SiOpenai color={SiOpenaiHex} />, position: "left-[105px] top-0 group-hover:rotate-[20deg] group-hover:translate-x-16 md:left-[190px] md:-top-2 sm:left-[150px]" },
+        { icon: <SiPython color={SiPythonHex} />, position: "-left-10 top-0 group-hover:-rotate-10 group-hover:translate-y-2" },
+        { icon: <SiPytorch color={SiPytorchHex} />, position: "-left-12 top-0 group-hover:-rotate-20 group-hover:translate-x-2" },
+        { icon: <SiNumpy color={SiNumpyHex} />, position: "left-10 top-0 group-hover:rotate-10 group-hover:-translate-y-2" },
+        { icon: <SiOpenai color={SiOpenaiHex} />, position: "left-12 top-0 group-hover:rotate-20 group-hover:translate-x-2" },
     ];
 
     const techIcons: ItemProps[] = [
-        { icon: "💻", position: "-left-[100px] -top-7 -rotate-[30deg] group-hover:-translate-y-8 md:-left-40 md:-top-16 sm:-left-32" },
-        { icon: "🎮", position: "-left-[115px] -top-2 group-hover:-rotate-45 md:-left-44 md:-top-1 sm:-left-36" },
-        { icon: "👨‍💻", position: "left-32 -top-12 rotate-[30deg] md:left-[200px] md:-top-[70px] sm:left-[175px] sm:-top-12" },
-        { icon: "🕹️", position: "left-32 -top-2 group-hover:rotate-[45deg] md:left-[200px] md:-top-1 sm:left-[160px] " },
+        { icon: "💻", position: "-left-10 -top-2 group-hover:rotate-30 group-hover:-translate-y-2" },
+        { icon: "🎮", position: "-left-12 top-0 group-hover:-rotate-45" },
+        { icon: "👨‍💻", position: "left-10 -top-2 group-hover:rotate-30" },
+        { icon: "🕹️", position: "left-12 top-0 group-hover:rotate-45" },
     ];
 
     return (
@@ -56,7 +56,7 @@ const HeroSectionTextHover: React.FC<HeroCardProps> = ({ className }) => {
                     </span>.
                 </h1>
 
-                <p className="text-2xl font-semibold">
+                <div className="text-2xl font-semibold">
                     I am passionate about
                     <span className="group relative inline-block mx-1">
                         <span className="text-blue-400">Web Development</span>
@@ -70,16 +70,16 @@ const HeroSectionTextHover: React.FC<HeroCardProps> = ({ className }) => {
                         <span className="text-purple-400">Machine Learning</span>
                         <HoverEffect items={mlIcons} />
                     </span>.
-                </p>
+                </div>
 
-                <p className="text-2xl font-semibold">
+                <div className="text-2xl font-semibold">
                     I love to learn
                     <span className="group relative inline-block mx-1">
                         <span className="text-red-400">latest technologies</span>
                         <HoverEffect items={techIcons} />
                     </span>
                     and try to implement them.
-                </p>
+                </div>
             </div>
         </div>
     );
