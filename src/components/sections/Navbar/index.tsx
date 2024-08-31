@@ -7,7 +7,7 @@ import { useTheme } from 'next-themes';
 import { Separator } from "@/components/ui/separator";
 import { MoonIcon, SunIcon } from "@/components/shared/icons";
 
-export default function Header() {
+export default function Navbar() {
   const { theme, setTheme } = useTheme();
 
   const navItems = [

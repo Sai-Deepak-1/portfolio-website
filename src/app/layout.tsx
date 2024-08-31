@@ -5,7 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
-import Header from '@/components/sections/header';
+import Navbar from '@/components/sections/Navbar';
 // import Footer from '@/components/sections/Footer';
 
 const fontSans = Inter({
@@ -39,7 +39,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              <Header/>
+              <Navbar/>
               {children}
               {/* <Footer /> */}
               <Toaster />
