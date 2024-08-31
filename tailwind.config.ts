@@ -1,13 +1,18 @@
-import type { Config } from "tailwindcss"
+import type { Config } from "tailwindcss";
+const defaultTheme = require("tailwindcss/defaultTheme");
+const colors = require("tailwindcss/colors");
+const {
+  default: flattenColorPalette,
+} = require("tailwindcss/lib/util/flattenColorPalette");
 
 const config = {
   darkMode: ["class"],
   content: [
-    './pages/**/*.{ts,tsx}',
-    './components/**/*.{ts,tsx}',
-    './app/**/*.{ts,tsx}',
-    './src/**/*.{ts,tsx}',
-	],
+    "./pages/**/*.{ts,tsx}",
+    "./components/**/*.{ts,tsx}",
+    "./app/**/*.{ts,tsx}",
+    "./src/**/*.{ts,tsx}",
+  ],
   prefix: "",
   theme: {
     container: {
@@ -67,14 +72,91 @@ const config = {
           from: { height: "var(--radix-accordion-content-height)" },
           to: { height: "0" },
         },
+        "fade-in": {
+          "0%": {
+            opacity: "0%",
+          },
+          "75%": {
+            opacity: "0%",
+          },
+          "100%": {
+            opacity: "100%",
+          },
+        },
+        "fade-left": {
+          "0%": {
+            transform: "translateX(100%)",
+            opacity: "0%",
+          },
+
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        "fade-right": {
+          "0%": {
+            transform: "translateX(-100%)",
+            opacity: "0%",
+          },
+
+          "30%": {
+            transform: "translateX(0%)",
+            opacity: "100%",
+          },
+          "100%": {
+            opacity: "0%",
+          },
+        },
+        title: {
+          "0%": {
+            "line-height": "0%",
+            "letter-spacing": "0.25em",
+            opacity: "0",
+          },
+          "25%": {
+            "line-height": "0%",
+            opacity: "0%",
+          },
+          "80%": {
+            opacity: "100%",
+          },
+
+          "100%": {
+            "line-height": "100%",
+            opacity: "100%",
+          },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        title: "title 3s ease-out forwards",
+        "fade-in": "fade-in 3s ease-in-out forwards",
+        "fade-left": "fade-left 3s ease-in-out forwards",
+        "fade-right": "fade-right 3s ease-in-out forwards",
       },
     },
   },
-  plugins: [require("tailwindcss-animate")],
-} satisfies Config
+  plugins: [
+    require("tailwindcss-animate"),
+    require("@tailwindcss/typography"),
+    addVariablesForColors,
+  ],
+} satisfies Config;
 
-export default config
+export default config;
+
+function addVariablesForColors({ addBase, theme }: any) {
+  let allColors = flattenColorPalette(theme("colors"));
+  let newVars = Object.fromEntries(
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+  );
+
+  addBase({
+    ":root": newVars,
+  });
+}

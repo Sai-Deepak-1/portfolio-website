@@ -5,6 +5,7 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
+import Header from '@/components/sections/header';
 // import Header from '@/components/sections/Header';
 // import Footer from '@/components/sections/Footer';
 
@@ -39,7 +40,7 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-              {/* <Header /> */}
+              <Header/>
               {children}
               {/* <Footer /> */}
               <Toaster />
