@@ -1,5 +1,6 @@
 import { moon, sun } from "@/data/constants";
 import { motion } from "framer-motion";
+import React from "react";
 
 export type IconProps = React.HTMLAttributes<SVGElement>;
 
