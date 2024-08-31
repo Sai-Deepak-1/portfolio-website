@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 // dock.tsx
 import React, { createContext, useContext, useRef, useState, useCallback, useEffect } from 'react'
 import { motion, AnimatePresence, useMotionValue, useSpring, useTransform } from 'framer-motion'

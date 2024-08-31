@@ -4,13 +4,11 @@ import React from 'react';
 import { Dock, DockIcon } from './floating-dock';
 import { Home, User, Briefcase, BookOpen, Github, Linkedin } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { usePathname } from 'next/navigation';
 import { Separator } from "@/components/ui/separator";
 import { MoonIcon, SunIcon } from "@/components/shared/icons";
 
 export default function Header() {
   const { theme, setTheme } = useTheme();
-  const pathname = usePathname();
 
   const navItems = [
     { icon: <Home />, label: 'Home', href: '/' },
