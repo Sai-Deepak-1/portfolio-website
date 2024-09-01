@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Dock, DockIcon } from './floating-dock';
 import { Home, User, Briefcase, BookOpen, Github, Linkedin } from 'lucide-react';
 import { useTheme } from 'next-themes';
@@ -9,6 +9,18 @@ import { MoonIcon, SunIcon } from "@/components/shared/icons";
 
 export default function Navbar() {
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
+  const toggleThemeItem = {
+    icon: !mounted ? null : theme === "dark" ? <MoonIcon className='size-[1.2rem]' /> : <SunIcon className='size-[1.2rem]' />,
+    label: 'Toggle Mode',
+    onClick: () => setTheme(theme === "dark" ? "light" : "dark"),
+  };
+
 
   const navItems = [
     { icon: <Home />, label: 'Home', href: '/' },
@@ -18,15 +30,9 @@ export default function Navbar() {
   ];
 
   const socialItems = [
-    { icon: <Github />, label: 'GitHub', href: 'https://github.com/yourusername' },
-    { icon: <Linkedin />, label: 'LinkedIn', href: 'https://linkedin.com/in/yourusername' },
+    { icon: <Github />, label: 'GitHub', href: 'https://github.com/Sai-Deepak-1' },
+    { icon: <Linkedin />, label: 'LinkedIn', href: 'https://www.linkedin.com/in/sai-deepak-perumbudur/' },
   ];
-
-  const toggleThemeItem = {
-    icon: theme === "dark" ? <MoonIcon className='size-[1.2rem]'/> : <SunIcon className='size-[1.2rem]'/>,
-    label: 'Toggle Mode',
-    onClick: () => setTheme(theme === "dark" ? "light" : "dark"),
-  };
 
   return (
     <div className='fixed left-1/2 transform -translate-x-1/2 bottom-[15px]'>

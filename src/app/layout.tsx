@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
 import Navbar from '@/components/sections/Navbar';
+import { AnimatedGradient } from '@/components/shared/animated-gradient';
 // import Footer from '@/components/sections/Footer';
 
 const fontSans = Inter({
@@ -40,6 +41,7 @@ export default function RootLayout({
             disableTransitionOnChange
           >
               <Navbar/>
+              <AnimatedGradient />
               {children}
               {/* <Footer /> */}
               <Toaster />
