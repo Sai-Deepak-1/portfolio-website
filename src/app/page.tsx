@@ -4,6 +4,7 @@ import Hero from "@/components/sections/hero";
 import Preloader from "@/components/sections/preloader";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
+import { TapeSection } from './../components/shared/tape';
 
 export default function Home() {
   const [isLoading, setIsLoading] = useState(true);
@@ -25,6 +26,7 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Hero />
+      <TapeSection/>
     </>
   );
 }

@@ -1,9 +1,10 @@
 import Link from "next/link";
 import React from 'react';
 import { ChevronRight } from "lucide-react";
-import AnimatedWords from "@/components/shared/text-animations";
-import { monaSans } from "@/components/fonts/fonts";
-import { HoverBorderGradient } from "@/components/shared/hover-border-gradient";
+import AnimatedWords from "@/components/shared/animations/text-animations";
+import { monaSans } from "@/app/fonts/fonts";
+import { Button } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
 
 export default function Hero() {
     return (
@@ -26,23 +27,29 @@ export default function Hero() {
                     <div className="flex flex-wrap items-center justify-center gap-3">
 
                         <Link href="/resume">
-                            <HoverBorderGradient
-                                containerClassName="rounded-full"
-                                as="button"
-                                className="dark:bg-black bg-white text-black dark:text-white flex items-center group space-x-2"
+                            <Button
+                                className={cn(
+                                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+                                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
+                                )}
                             >
-                                <span>Download Resume</span>
-                            </HoverBorderGradient>
+                                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
+
+                                <p>Download Resume</p>
+                            </Button>
                         </Link>
                         <Link href="/contact">
-                            <HoverBorderGradient
-                                containerClassName="rounded-full"
-                                as="button"
-                                className="dark:bg-black bg-white text-black dark:text-white flex items-center group space-x-2"
+                            <Button
+                                className={cn(
+                                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
+                                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
+                                )}
                             >
+                                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
                                 <span>Contact Me</span>
                                 <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
-                            </HoverBorderGradient>
+                            </Button>
+
                         </Link>
                     </div>
                 </div>
