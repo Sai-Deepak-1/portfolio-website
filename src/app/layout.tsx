@@ -5,7 +5,8 @@ import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/components/shared/theme-provider";
-// import Footer from '@/components/sections/Footer';
+import Footer from '@/components/sections/footer';
+// import Navbar from '@/components/sections/Navbar';
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -34,7 +35,7 @@ export default function RootLayout({
         <head />
         <body
           className={cn(
-            "min-h-screen bg-background font-sans",
+            "min-h-screen bg-background font-sans scroll-smooth",
             geistSans, geistMono
           )}
         >
@@ -46,7 +47,7 @@ export default function RootLayout({
           >
             {/* <Navbar/> */}
             {children}
-            {/* <Footer /> */}
+            <Footer />
             <Toaster />
           </ThemeProvider>
 

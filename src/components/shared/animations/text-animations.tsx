@@ -45,14 +45,14 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, style }) => {
     },
   };
 
-  // const staggerChildren = {
-  //   animate: {
-  //     transition: {
-  //       delayChildren: 0.4,
-  //       staggerChildren: 0.1,
-  //     },
-  //   },
-  // };
+  const staggerChildren = {
+    animate: {
+      transition: {
+        delayChildren: 0.4,
+        staggerChildren: 0.1,
+      },
+    },
+  };
 
   return (
     <h1 aria-label={title} role="heading">
@@ -65,7 +65,7 @@ const AnimatedWords: React.FC<AnimatedWordsProps> = ({ title, style }) => {
             key={index}
             initial="initial"
             animate={ctrls}
-            // variants={staggerChildren}
+            variants={staggerChildren}
             transition={{
               delayChildren: index * 0.25,
               staggerChildren: 0.05,

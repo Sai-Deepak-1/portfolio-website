@@ -1,39 +1,53 @@
-import { Fragment } from 'react';
+'use client'
 
-const words = [
-  "performant",
-  "Accessible",
-  "Secure",
-  "Interactive",
-  "Scalable",
-  "User Friendly",
-  "Resposive",
-  "Maintainable",
-  "Search Optimized",
-  "Usable",
-  "Reliable",
+import { Zap } from "lucide-react"
+import Marquee from "@/components/ui/marquee"
+
+const techs = [
+  "Java",
+  "Python",
+  "JavaScript",
+  "TypeScript",
+  "React",
+  "Next.js",
+  "Tailwind CSS",
+  "Chakra UI",
+  "Shadcn UI",
+  "GraphQL",
+  "React Query",
+  "React Hook Form",
+  "Zod",
+  "Framer Motion",
+  "Node.js",
+  "Express",
+  "Prisma",
+  "PostgreSQL",
+  "MySQL",
+  "JWT",
+  "Git",
+  "GitHub Actions",
 ]
 
 export const TapeSection = () => {
   return (
-    <div className='py-16 lg:py-24 overflow-x-clip'>
-      <div className='bg-gradient-to-r from-emerald-300 to-sky-400 overflow-x-clip -rotate-3 -mx-1'>
-        <div className='flex [mask-image:linear-gradient(to_right,transparent,black_10%,black_90%,transparent)]'>
-          <div 
-            className='flex flex-none gap-4 pr-4 py-3 animate-move-left [animation-duration:30s]'>
-            {[...new Array(2)].fill(0).map((_, idx) => (
-              <Fragment key={idx}>
-                {words.map((word) => (
-                  <div key={word} className='inline-flex gap-4 items-center'>
-                    <span className='text-gray-900 uppercase font-extrabold text-sm'>{word}</span>
-                    <img src='/svg/radial-star.svg' className="size-5" />
-                  </div>
-                ))}
-              </Fragment>
-            ))}
+    <section
+      data-testid="moving-techs"
+      className="relative h-20 w-full max-w-[100vw] overflow-hidden border-y border-border"
+    >
+      <Marquee className="h-full" pauseOnHover>
+        {techs.map((tech, index) => (
+          <div key={index} className="flex items-center gap-6 px-4">
+            <Zap className="h-4 w-4 flex-none fill-primary text-primary" />
+            <span className="flex-none text-base font-semibold text-primary">{tech}</span>
           </div>
-        </div>
-      </div>
-    </div>
+        ))}
+      </Marquee>
+
+      {/* Gradient overlay */}
+      <div className="absolute inset-y-0 left-0 w-14 bg-gradient-to-r from-background to-transparent" />
+      <div className="absolute inset-y-0 right-0 w-14 bg-gradient-to-l from-background to-transparent" />
+    </section>
   )
-};
+}
+
+export default TapeSection
