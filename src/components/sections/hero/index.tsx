@@ -3,7 +3,7 @@ import React from 'react';
 import { ChevronRight } from "lucide-react";
 import AnimatedWords from "@/components/shared/animations/text-animations";
 import { monaSans } from "@/app/fonts/fonts";
-import { Button } from "@/components/ui/button";
+import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
 export default function Hero() {
@@ -23,32 +23,29 @@ export default function Hero() {
                     <p className="text-xl text-gray-700 dark:text-gray-300 text-center max-w-xl mt-4">
                         A Java Developer with a passion in building Web Development and ML DevOps.
                     </p>
-                    <div className="flex flex-wrap items-center justify-center gap-3">
+                    <div className="mt-8 flex flex-col sm:flex-row gap-4">
 
-                        <Link href="/resume">
-                            <Button
-                                className={cn(
-                                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                                    "bg-[#ff7f50] transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-                                )}
-                            >
-                                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-
-                                <p>Download Resume</p>
-                            </Button>
+                        <Link
+                            className={cn(
+                                buttonVariants({ variant: "rainbow", size: "lg" }),
+                                "w-full gap-2 whitespace-nowrap",
+                            )}
+                            href="/resume"
+                        >
+                            <p>Download Resume</p>
                         </Link>
-                        <Link href="/contact">
-                            <Button
-                                className={cn(
-                                    "group relative w-full gap-2 overflow-hidden text-lg font-semibold tracking-tighter",
-                                    "transform-gpu ring-offset-current transition-all duration-300 ease-out hover:ring-2 hover:ring-primary hover:ring-offset-2",
-                                )}
-                            >
-                                <span className="absolute right-0 -mt-12 h-32 w-8 translate-x-12 rotate-12 transform-gpu bg-white opacity-10 transition-all duration-1000 ease-out group-hover:-translate-x-96 dark:bg-black" />
-                                <span>Contact Me</span>
-                                <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
-                            </Button>
-
+                        <Link
+                            className={cn(
+                                buttonVariants({
+                                    variant: "outline",
+                                    size: "lg",
+                                }),
+                                "group relative gap-2 w-full",
+                            )}
+                            href="/contact"
+                        >
+                            <span>Contact Me</span>
+                            <ChevronRight className="w-4 h-4 ml-2 group-hover:translate-x-1 duration-300" />
                         </Link>
                     </div>
                 </div>
