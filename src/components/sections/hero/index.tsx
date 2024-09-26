@@ -5,13 +5,14 @@ import AnimatedWords from "@/components/shared/animations/text-animations";
 import { monaSans } from "@/app/fonts/fonts";
 import { buttonVariants } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { AnimatedGradient } from "@/components/shared/animated-gradient";
 
 export default function Hero() {
     return (
         <section
             className="flex h-[80vh] w-full items-center justify-center py-0 sm:h-[90vh] md:h-[100vh] 3xl:h-[60vh]"
         >
-
+            <AnimatedGradient/>
             <div className="mx-auto lg:max-w-7xl w-full px-5 sm:px-10 md:px-12 lg:px-5">
                 <div
                     className={`text-center flex flex-col items-center space-y-10 ${monaSans.className}`}
