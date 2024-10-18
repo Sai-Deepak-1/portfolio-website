@@ -2,6 +2,7 @@
 
 import Hero from "@/components/sections/hero";
 import Preloader from "@/components/sections/preloader";
+import ProjectCard from "@/components/sections/project-card";
 import { AnimatePresence } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -25,6 +26,7 @@ export default function Home() {
         {isLoading && <Preloader />}
       </AnimatePresence>
       <Hero />
+      <ProjectCard/>
     </>
   );
 }
